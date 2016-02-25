@@ -1,0 +1,37 @@
+PROGETTO MATURITA'
+cosa prefede?
+Il progetto che cercheremo di portare a termine riprende un nostro vecchio progetto che avevamo pensato e cercati di ideare per l'openDay.
+Riprendendo questo progetto vogliamo mogliorare aspetti che avevamo gia implementato come la lettura dei prodotti tramite webcam che pensiamo di sostituire con un lettore laser, migliorare funzioni che avevamo gia implementato e introdurre nuove funzioni. In conseguenza a ciò miglioreremo l'applicazione desktop, e quella che riguarda il sito web; inoltre aggiungeremo un applicazione Android che ci permetterà di usare le varie funzioni del progetto.
+
+quali sono le funzioni?
+
+DESKTOP
+- aggiungi prodotto
+- elimina prodotto
+- ricerca
+- opzione dieta (NUOVO)
+- ricette (NUOVO)
+- registrazione (NUOVO)
+
+WEB
+- viasualizza contenuto
+- ricerca
+- lista spesa (NUOVO)
+- registrazione (NUOVO)
+
+APPLICAZIONE ANDROID (NUOVO)
+- visualizzazione
+- ricerca
+- gestione dispensa
+	- visualizza
+	- aggiungi
+	- elimina
+	- ricerca
+	- opzione dieta
+	- ricette
+
+
+
+
+
+
