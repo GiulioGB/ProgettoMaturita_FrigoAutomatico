@@ -29,12 +29,15 @@
 		}
 		else
 		{
-			echo "no ";
-			echo $nome." diverso da ".$vettoreFrigo[$i];
-			echo "indice ".$i;
+			//echo "no ";
+			//echo $nome." diverso da ".$vettoreFrigo[$i];
+			//echo "indice ".$i;
 		}
-		echo $sentinella;
+		//echo $sentinella;
 		$_SESSION["ERRORE"]=1;
+		
+		$s = true;
+		
 		if( $sentinella == 1)
 		{
 			echo "stai per uscire da ciclo";
@@ -42,13 +45,14 @@
 			//setto la variabile di sessione
 			$_SESSION["CodiceFrigo"] = $nome;
 			$_SESSION["ERRORE"] = $sentinella;
-			header("location: LogIn.php");
+			header("location: index.php");
 			//break;
 		}
 		else
 		{
 			$_SESSION["ERRORE"] = $sentinella;
-			//header("location: LogIn.php");
+			header("location: LogIn.php");
+			
 		}
 		$indice2 +=2 ;
 	}

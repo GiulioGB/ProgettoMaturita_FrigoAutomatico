@@ -1,20 +1,31 @@
 <html>
 	<head>
 		<title>LogIn</title>
+		
+		<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+		<!-- mio stile -->
+		<link href="css/mioStile.css" rel="stylesheet">
+		
+        <!-- Font Awesome CSS -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+		<link href="css/animate.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		
 		<?php session_start(); ?>
+		
     </head>
-	</head>
 	<body>
 <!-- Inizio pagina di Log-In -->
-			<div class="section-modal modal fade" id="LogIn" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="lr">
-							<div class="rl">
-							</div>
-						</div>
-					</div>
-					
+			
+			
+			
+			
+		<div id="MIOdivLog">	
 					<div class="container">
 						<div class="row">
 							<div class="section-title text-center">
@@ -41,21 +52,22 @@
 									}
 									else if($_SESSION["ERRORE"] == 0)
 									{
-										echo "LOGN NON VALIDA ! Riprovare";
-										
+										$message = "ERRORE! Password o Utente non corretta";
+										echo "<SCRIPT> 
+										alert('$message');
+										</SCRIPT>";
 									}
-									else if($_SESSION["ERRORE"] == 1)
-									{
-										echo "Login effettuata con successo! Torna pure alla HOME";
+									//else if($_SESSION["ERRORE"] == 1)
+									//{
+										//echo "Login effettuata con successo! Torna pure alla HOME";
 										
-									}
+									//}
 									unset($_SESSION["ERRORE"]);
 								?>
 						   </div>
 						</div>
 					</div>    
 				</div>
-			</div>
 <!-- Fine della pagina di Log-In -->
 	</body>
 </html>

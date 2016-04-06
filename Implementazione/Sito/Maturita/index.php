@@ -173,7 +173,7 @@
                         </div>
                         
                         <div class="menu-item blue">
-                            <a href="#Info" data-toggle="modal">
+                            <a href="Info.php" >
                                 <i class="fa fa-info-circle"></i>
                                 <p>Di cosa si tratta ?</p>
                             </a>
@@ -216,6 +216,41 @@
                             <p>Di seguito verrà visualizzato il contenuto del frigo, nonchè i prodotti al suo interno con relativi dettagli</p>
                         </div>
                     </div>
+					<div class="row">
+						<video autoplay="true" id="video" width="320"></video>
+ 
+        <script>
+            var video = document.getElementById('video');
+ 
+            //Cross Browser user media function
+            navigator.getMedia = (navigator.getUserMedia ||
+                    navigator.webkitGetUserMedia ||
+                    navigator.mozGetUserMedia);
+ 
+            var options = {
+                video: true,
+                audio: false
+            };
+ 
+            var onSuccess = function(stream) {
+                //Firefox
+                if (navigator.mozGetUserMedia) {
+                    video.mozSrcObject = stream;
+                } else {
+                    //Chrome,Opera
+                    var vendorURL = window.URL || window.webkitURL;
+                    video.src = vendorURL.createObjectURL(stream);
+                }
+            };
+ 
+            var onError = function(err) {
+                console.log("An error occured! " + err);
+            };
+ 
+            navigator.getMedia(options, onSuccess, onError);
+ 
+        </script>
+					</div>
                 </div>
 			</div>
 		</div>
@@ -267,69 +302,7 @@
 			</div>
 		</div>
         <!-- Fine pagina Lista della Spesa -->
-        
-        
-        <!-- Inizio pagina di Log-In --><!--
-        <div class="section-modal modal fade" id="LogIn" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Accedi</h3>
-                            <p>Inserisci il codice del tuo frigo e la password che hai inserito al momento della sua accensione</p>
-							<br/>
-							<br/>
-							
-							<form action="salva.php" method="POST">
-								<label>CODICE del frigo:&nbsp;&nbsp;&nbsp;<input type="Text" name="CodFrigo" id="CodFrigo" required/></label>
-								<br/>
-								<br/>
-								<label>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Password" name="Psw" id="Psw" required/></label>
-								<br/>
-								<br/>
-								<input type="submit" id="submit" name="submit" value="Accedi"/>&nbsp;&nbsp;<input type="reset" id="reset" name="reset" value="Cancella">
-							</form>
-							
-					   </div>
-                    </div>
-                </div>    
-            </div>
-        </div>-->
-        <!-- Fine della pagina di Log-In -->
-        
-        
-        <!-- Inizio pagina di Log-Out-->
-        <div class="section-modal modal fade" id="LogOut" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>LogOut</h3>
-                            <p>Se sei sicuro di volerti disconnettere, premi sul tasto "conferma LogOut"</p>
-							<br/>
-							<br/>
-							<input type="button" id="Disconnetti" name="Disconnetti" value="conferma LogOut" />
-                        </div>
-                    </div>
-                </div>                
-            </div>
-        </div>
-        <!-- Fine pagina di Log-Out -->
-        
+                     
         
         <!-- Inizio pagina inventario nella dispensa -->
         <div class="section-modal modal fade" id="InventarioD" tabindex="-1" role="dialog" aria-hidden="true">
@@ -369,7 +342,7 @@
                     <div class="row">
                         <div class="section-title text-center">
                             <h3>Ricerca</h3>
-                            <p>opo aver scritto il nome del prodotto che desideri cercare all'interno della dispensa, premi sul pulsante cerca</p>
+                            <p>Dopo aver scritto il nome del prodotto che desideri cercare all'interno della dispensa, premi sul pulsante cerca</p>
                         </div>
                     </div>                  
                 </div>                
