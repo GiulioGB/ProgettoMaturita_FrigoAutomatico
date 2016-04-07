@@ -51,5 +51,37 @@ namespace Frigo
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)//AGGIUNGI ADX
+        {
+            Form reg = new registrazione();
+            reg.ShowDialog(this);
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)//AGGIUNGI BDX
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)//AGGIUNGIAC
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)//AGGIUNGIBC
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)//AGGIUNGIASX
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)//AGGIUNGIBSX
+        {
+
+        }
     }
 }

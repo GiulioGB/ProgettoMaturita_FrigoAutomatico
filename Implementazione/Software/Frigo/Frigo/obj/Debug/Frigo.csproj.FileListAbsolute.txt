@@ -7,3 +7,13 @@ C:\Users\studente\Documents\Visual Studio 2013\Maturità\Frigo\Frigo\obj\Debug\F
 C:\Users\studente\Documents\Visual Studio 2013\Maturità\Frigo\Frigo\obj\Debug\Frigo.csproj.GenerateResource.Cache
 C:\Users\studente\Documents\Visual Studio 2013\Maturità\Frigo\Frigo\obj\Debug\Frigo.exe
 C:\Users\studente\Documents\Visual Studio 2013\Maturità\Frigo\Frigo\obj\Debug\Frigo.pdb
+D:\Maturità\Frigo\Frigo\bin\Debug\Frigo.exe.config
+D:\Maturità\Frigo\Frigo\obj\Debug\Frigo.exe
+D:\Maturità\Frigo\Frigo\obj\Debug\Frigo.pdb
+D:\Maturità\Frigo\Frigo\bin\Debug\Frigo.exe
+D:\Maturità\Frigo\Frigo\bin\Debug\Frigo.pdb
+D:\Maturità\Frigo\Frigo\obj\Debug\Frigo.csprojResolveAssemblyReference.cache
+D:\Maturità\Frigo\Frigo\obj\Debug\Frigo.Properties.Resources.resources
+D:\Maturità\Frigo\Frigo\obj\Debug\Frigo.csproj.GenerateResource.Cache
+D:\Maturità\Frigo\Frigo\obj\Debug\Frigo.Form1.resources
+D:\Maturità\Frigo\Frigo\obj\Debug\Frigo.registrazione.resources
