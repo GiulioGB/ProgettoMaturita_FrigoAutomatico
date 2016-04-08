@@ -3,26 +3,28 @@
 
 
 #MIOdivLog{
-	width: 90%;
-	height: 60%;
+	width: auto;
+	height: auto;
 	background-color: rgba(255, 255, 255, 0.85);
 	position: absolute;
 	text-align: center;
 	left: 5%;
 	right: 5%;
 	top: 15%;
+	margin-bottom: 4.7%;
      border-color: #107865;
     border-style:double;
     border-width:thick;
 
 	border-radius: 30px;
+	
 }
 
 #submit,#reset,#ritorna{
 
     background-color: #0eceab;
-    width: 17%;
-    height: 11%;
+    width: auto;
+    height: 50px;
     border: 2px solid #107865;
     font-family: Cambria;
     font-size:16px;

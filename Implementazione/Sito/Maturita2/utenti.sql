@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `utenti` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Username` varchar(20) NOT NULL,
-  `Password` varchar(20) NOT NULL,
+  `Password` varchar(35) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
@@ -38,8 +38,9 @@ CREATE TABLE IF NOT EXISTS `utenti` (
 --
 
 INSERT INTO `utenti` (`ID`, `Username`, `Password`) VALUES
-(1, 'Frigo1', 'ciao'),
-(2, 'Frigo2', 'ciao2');
+(1, 'Frigo1', '6e6bc4e49dd477ebc98ef4046c067b5f'); 
+(2, 'Frigo2', 'c7cc6a1fd6d6b5f4817025cb532b52fa');
+(3, 'Frigo3', '3cd56ca40c0be39daad5c1398df013f9');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

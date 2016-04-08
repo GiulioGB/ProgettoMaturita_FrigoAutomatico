@@ -19,7 +19,7 @@
         <link href="css/font-awesome.min.css" rel="stylesheet">
 		
 		<!-- Custom CSS -->
-        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet"> 
 
         <!-- Custom CSS -->
         <link href="css/style.css" rel="stylesheet">
@@ -70,24 +70,80 @@
                     <div class="col-md-3">
                         
                         <div class="menu-item blue">
-                            <a href="#InventarioF" data-toggle="modal">
-                                <i class="fa fa-th-list"></i>
-                                <p>Inventario Frigo</p>
-                            </a>
+							
+                            <?php 
+							if(isset($_SESSION["CodiceFrigo"]))
+							{
+								echo "<a href='#InventarioF' data-toggle='modal'>";
+								echo "<i class='fa fa-th-list'></i>";
+								echo "<p>";
+								echo "Inventario Frigo";
+								echo "</p>";
+								echo "</a>";
+								
+							}
+							else
+							{
+								echo "<a href='' data-toggle='modal'>";
+								echo "<i class='fa fa-th-list'></i>";
+								echo "<p>";
+								echo "Funzione Riservata";
+								echo "</p>";
+								echo "</a>";
+							}
+							?>
+							                     
                         </div>
                         
                         <div class="menu-item green">
-                            <a href="#RicercaF" data-toggle="modal">
-                                <i class="fa fa-search"></i>
-                                <p>Ricerca prod. nel Frigo</p>
-                            </a>
+						
+						<?php 
+							if(isset($_SESSION["CodiceFrigo"]))
+							{
+								echo "<a href='#RicercaF' data-toggle='modal'>";
+								echo "<i class='fa fa-search'></i>";
+								echo "<p>";
+								echo "Ricerca prod. nel Frigo";
+								echo "</p>";
+								echo "</a>";
+								
+							}
+							else
+							{
+								echo "<a href='' data-toggle='modal'>";
+								echo "<i class='fa fa-search'></i>";
+								echo "<p>";
+								echo "Funzione Riservata";
+								echo "</p>";
+								echo "</a>";
+							}
+						?>
+                            
                         </div>
                         
                         <div class="menu-item light-red">
-                            <a href="#ListaS" data-toggle="modal">
-                                <i class="fa fa-shopping-cart"></i>
-                                <p>Lista della spesa</p>
-                            </a>
+						<?php 
+							if(isset($_SESSION["CodiceFrigo"]))
+							{
+								echo "<a href='#ListaS' data-toggle='modal'>";
+								echo "<i class='fa fa-shopping-cart'></i>";
+								echo "<p>";
+								echo "Lista della spesa";
+								echo "</p>";
+								echo "</a>";
+								
+							}
+							else
+							{
+								echo "<a href='' data-toggle='modal'>";
+								echo "<i class='fa fa-shopping-cart'></i>";
+								echo "<p>";
+								echo "Funzione Riservata";
+								echo "</p>";
+								echo "</a>";
+							}
+						?>
+                            
                         </div>
                         
                     </div>
@@ -159,17 +215,53 @@
                     <div class="col-md-3">
                         
                         <div class="menu-item light-red">
-                            <a href="#InventarioD" data-toggle="modal">
-                                <i class="fa fa-th-list"></i>
-                                <p>Inventario Dispensa</p>
-                            </a>
+						<?php 
+							if(isset($_SESSION["CodiceFrigo"]))
+							{
+								echo "<a href='#InventarioD' data-toggle='modal'>";
+								echo "<i class='fa fa-th-list'></i>";
+								echo "<p>";
+								echo "Inventario Frigo";
+								echo "</p>";
+								echo "</a>";
+								
+							}
+							else
+							{
+								echo "<a href='' data-toggle='modal'>";
+								echo "<i class='fa fa-th-list'></i>";
+								echo "<p>";
+								echo "Funzione Riservata";
+								echo "</p>";
+								echo "</a>";
+							}
+						?>
+                            
                         </div>
                         
                         <div class="menu-item color">
-                            <a href="#RicercaD" data-toggle="modal">
-                                <i class="fa fa-search"></i>
-                                <p>Ricerca prod. nella dispensa</p>
-                            </a>
+						<?php 
+							if(isset($_SESSION["CodiceFrigo"]))
+							{
+								echo "<a href='#RicercaD' data-toggle='modal'>";
+								echo "<i class='fa fa-search'></i>";
+								echo "<p>";
+								echo "Ricerca prod. nella dispensa";
+								echo "</p>";
+								echo "</a>";
+								
+							}
+							else
+							{
+								echo "<a href='' data-toggle='modal'>";
+								echo "<i class='fa fa-search'></i>";
+								echo "<p>";
+								echo "Funzione Riservata";
+								echo "</p>";
+								echo "</a>";
+							}
+						?>
+                            
                         </div>
                         
                         <div class="menu-item blue">
