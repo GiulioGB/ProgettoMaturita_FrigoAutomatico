@@ -74,7 +74,7 @@
                             <?php 
 							if(isset($_SESSION["CodiceFrigo"]))
 							{
-								echo "<a href='#InventarioF' data-toggle='modal'>";
+								echo "<a href='Inventario.php' >";
 								echo "<i class='fa fa-th-list'></i>";
 								echo "<p>";
 								echo "Inventario Frigo";
@@ -85,7 +85,7 @@
 							else
 							{
 								echo "<a href='' data-toggle='modal'>";
-								echo "<i class='fa fa-th-list'></i>";
+								echo "<i class='fa fa-ban'></i>";
 								echo "<p>";
 								echo "Funzione Riservata";
 								echo "</p>";
@@ -100,7 +100,7 @@
 						<?php 
 							if(isset($_SESSION["CodiceFrigo"]))
 							{
-								echo "<a href='#RicercaF' data-toggle='modal'>";
+								echo "<a href='ricerca.php' >";
 								echo "<i class='fa fa-search'></i>";
 								echo "<p>";
 								echo "Ricerca prod. nel Frigo";
@@ -111,7 +111,7 @@
 							else
 							{
 								echo "<a href='' data-toggle='modal'>";
-								echo "<i class='fa fa-search'></i>";
+								echo "<i class='fa fa-ban'></i>";
 								echo "<p>";
 								echo "Funzione Riservata";
 								echo "</p>";
@@ -136,7 +136,7 @@
 							else
 							{
 								echo "<a href='' data-toggle='modal'>";
-								echo "<i class='fa fa-shopping-cart'></i>";
+								echo "<i class='fa fa-ban'></i>";
 								echo "<p>";
 								echo "Funzione Riservata";
 								echo "</p>";
@@ -229,7 +229,7 @@
 							else
 							{
 								echo "<a href='' data-toggle='modal'>";
-								echo "<i class='fa fa-th-list'></i>";
+								echo "<i class='fa fa-ban'></i>";
 								echo "<p>";
 								echo "Funzione Riservata";
 								echo "</p>";
@@ -254,7 +254,7 @@
 							else
 							{
 								echo "<a href='' data-toggle='modal'>";
-								echo "<i class='fa fa-search'></i>";
+								echo "<i class='fa fa-ban'></i>";
 								echo "<p>";
 								echo "Funzione Riservata";
 								echo "</p>";
@@ -290,64 +290,7 @@
         </div>
         <!-- End Copyright Section -->
         
-        
-        <!-- Inizio pagina Inventario Frigo -->
-        <div class="section-modal modal fade" id="InventarioF" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Inventario frigo</h3>
-                            <p>Di seguito verrà visualizzato il contenuto del frigo, nonchè i prodotti al suo interno con relativi dettagli</p>
-                        </div>
-                    </div>
-					<div class="row">
-						<video autoplay="true" id="video" width="320"></video>
- 
-        <script>
-            var video = document.getElementById('video');
- 
-            //Cross Browser user media function
-            navigator.getMedia = (navigator.getUserMedia ||
-                    navigator.webkitGetUserMedia ||
-                    navigator.mozGetUserMedia);
- 
-            var options = {
-                video: true,
-                audio: false
-            };
- 
-            var onSuccess = function(stream) {
-                //Firefox
-                if (navigator.mozGetUserMedia) {
-                    video.mozSrcObject = stream;
-                } else {
-                    //Chrome,Opera
-                    var vendorURL = window.URL || window.webkitURL;
-                    video.src = vendorURL.createObjectURL(stream);
-                }
-            };
- 
-            var onError = function(err) {
-                console.log("An error occured! " + err);
-            };
- 
-            navigator.getMedia(options, onSuccess, onError);
- 
-        </script>
-					</div>
-                </div>
-			</div>
-		</div>
-        <!-- Fine pagina Inventario Frigo -->
-        
+       
         
         
         <!-- Inizio pagina Ricerca nel Frigo -->
