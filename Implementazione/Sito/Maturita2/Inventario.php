@@ -40,17 +40,16 @@
 							mysqli_select_db($link, "prova2");
 
 							//imposto la query
-							$result = mysqli_query($link, "SELECT nome, tipo, dataScadenza FROM prodotti");
+							$result = mysqli_query($link, "SELECT Nome, dataScadenza FROM prodotti");
 
 							echo "</br>";
 							echo "<table border='3' align='center' >";
-							echo "<tr><td>Nome Prodotto</td><td>Tipo Prodotto</td><td>Data di Scadenza</td></tr>";
+							echo "<tr><td>Nome Prodotto</td><td>Data di Scadenza</td></tr>";
 							while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
 
 								echo "<tr>";
 								echo "<td align='center'>$row[0]</td>";
 								echo "<td align='center'>$row[1]</td>";
-								echo "<td align='center'>$row[2]</td>";
 								echo "</tr>";
 								
 								
