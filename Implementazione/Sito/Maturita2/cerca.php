@@ -22,23 +22,30 @@
 	$nomeProdotto = $_POST['prodotto'];
 	$result = mysqli_query($link, "SELECT Nome, dataScadenza FROM prodotti WHERE Nome = '$nomeProdotto' ");
 	$s = 0;
-
+	$vett = array();
+	
+	
 
 	while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
 		
-		$SESSION['nomeP'] = $row['Nome'];
-		$SESSION['dataS'] = $row['dataScadenza'];
+		$stringa = $row['Nome'] + " " + $row['dataScadenza'];
+		array_push($vett, $stringa ); 
 		//printf("Nome: %s Data: %s ", $row['Nome'], $row['dataScadenza']);
+		
 		$s=1;
+		
 	}
 
-	if($s = 0)
-		$SESSION['nomeP'] = "null";
-		
-	
+	if($s == 0)
+		$_SESSION['s'] = "0";
+	else
+	{
+		$_SESSION['s'] = "1";
+		$_SESSION['s'] = $vett;
+	}
 	
 	mysqli_free_result($result); 
-	header(ricerca.php);
+	header("location:ricerca.php");
 	?>
 </body>
 </html>
