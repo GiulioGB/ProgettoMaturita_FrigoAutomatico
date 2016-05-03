@@ -22,3 +22,4 @@ D:\GitMaturita\ProgettoMaturita_FrigoAutomatico\Implementazione\Software\Windows
 D:\GitMaturita\ProgettoMaturita_FrigoAutomatico\Implementazione\Software\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\MySql.Data.dll
 D:\GitMaturita\ProgettoMaturita_FrigoAutomatico\Implementazione\Software\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WebCam_Capture.dll
 D:\GitMaturita\ProgettoMaturita_FrigoAutomatico\Implementazione\Software\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\zxing.dll
+D:\GitMaturita\ProgettoMaturita_FrigoAutomatico\Implementazione\Software\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.testControl.resources
