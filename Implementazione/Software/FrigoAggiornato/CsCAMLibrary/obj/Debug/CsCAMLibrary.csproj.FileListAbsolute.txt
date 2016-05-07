@@ -1,0 +1,36 @@
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\bin\Debug\CsCAMLibrary.dll
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\bin\Debug\CsCAMLibrary.pdb
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\bin\Debug\WebCam_Capture.dll
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\bin\Debug\zxing.dll
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.csprojResolveAssemblyReference.cache
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.testControl.resources
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.csproj.GenerateResource.Cache
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.dll
+C:\Users\studente\Desktop\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.pdb
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\bin\Debug\CsCAMLibrary.dll
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\bin\Debug\CsCAMLibrary.pdb
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\bin\Debug\WebCam_Capture.dll
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\bin\Debug\zxing.dll
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.csprojResolveAssemblyReference.cache
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.testControl.resources
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.csproj.GenerateResource.Cache
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.dll
+C:\Users\studente\Desktop\open day\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.pdb
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\bin\Debug\CsCAMLibrary.dll
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\bin\Debug\CsCAMLibrary.pdb
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\bin\Debug\WebCam_Capture.dll
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\bin\Debug\zxing.dll
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.csprojResolveAssemblyReference.cache
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.testControl.resources
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.csproj.GenerateResource.Cache
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.dll
+C:\Users\studente\Desktop\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.pdb
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\bin\Debug\CsCAMLibrary.dll
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\bin\Debug\CsCAMLibrary.pdb
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\bin\Debug\WebCam_Capture.dll
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\bin\Debug\zxing.dll
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.csprojResolveAssemblyReference.cache
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.testControl.resources
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.csproj.GenerateResource.Cache
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.dll
+C:\Users\studente\Desktop\scuola\OpenDay_FRIGO\MFCCam\CsCAMLibrary\obj\Debug\CsCAMLibrary.pdb
