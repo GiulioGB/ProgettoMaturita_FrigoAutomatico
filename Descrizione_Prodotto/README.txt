@@ -1,1 +1,0 @@
-In questa cartella si trovano tutti i file atti a descrivere il prodotto, sia a livello di caratteristiche fisiche che funzionali.
