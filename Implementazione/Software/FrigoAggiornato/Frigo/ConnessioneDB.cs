@@ -230,5 +230,48 @@ namespace Frigo
 
             ChiudiConnessione();
         }
+
+        //Salva frigo
+        public bool SalvaF(TextBox prima, TextBox seconda, TextBox terza)
+        {
+            if (leggiFrigo(prima.Text) == "no")
+            {
+                if (seconda.Text == terza.Text && seconda.Text!="")
+                {
+                    MD5 md5 = MD5.Create();
+
+                    byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(seconda.Text);
+
+                    byte[] hash = md5.ComputeHash(inputBytes);
+
+                    StringBuilder sb = new StringBuilder();
+
+                    for (int i = 0; i < hash.Length; i++)
+                    {
+
+                        sb.Append(hash[i].ToString("x2"));
+
+                    }
+
+                    string q = "INSERT INTO utenti (Username,Password) values('" + prima.Text + "','" + sb + "');";
+
+                    ExecuteQuery(q);
+
+                    ChiudiConnessione();
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Le password non corrispondono o sono presenti campi vuoti ");
+
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Il frigo esiste già");
+                return false;
+            }
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace Frigo
 {
     public partial class Registrazione : UserControl
     {
+        ConnessioneDB conn = new ConnessioneDB();
         public Registrazione()
         {
             InitializeComponent();
@@ -33,7 +34,13 @@ namespace Frigo
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (conn.SalvaF(textBox1, textBox2, textBox3) == true)
+            {
+                Login log = new Login();
+                Controls.Add(log);
+                log.BringToFront();
+                this.Refresh();
+            }
         }
     }
 }
