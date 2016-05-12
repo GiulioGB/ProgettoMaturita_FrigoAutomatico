@@ -1,0 +1,1 @@
+In questa cartella inseriremo le varie versioni del progetto , fino ad arrivare alla versione definitiva.

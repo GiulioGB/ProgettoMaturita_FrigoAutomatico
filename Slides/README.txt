@@ -1,0 +1,1 @@
+In questa cartella inseriremo le slide di presentazione del progetto
