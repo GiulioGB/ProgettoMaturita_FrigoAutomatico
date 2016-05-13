@@ -25,23 +25,21 @@
 	$vett = array();
 	
 	
-
 	while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
 		
-		$stringa = $row['Nome'] + " " + $row['dataScadenza'];
+		$stringa = $row['Nome']."/".$row['dataScadenza'];
 		array_push($vett, $stringa ); 
 		//printf("Nome: %s Data: %s ", $row['Nome'], $row['dataScadenza']);
-		
-		$s=1;
-		
+		$s++;
 	}
-
+	
+	
 	if($s == 0)
-		$_SESSION['s'] = "0";
+		$_SESSION['s'] = 0;
 	else
 	{
-		$_SESSION['s'] = "1";
-		$_SESSION['s'] = $vett;
+		$_SESSION['s'] = 1;
+		$_SESSION['result'] = serialize($vett);
 	}
 	
 	mysqli_free_result($result); 

@@ -3,7 +3,8 @@
 		<link href="css/mioStileRicerca.css" rel="stylesheet">
 		
 		<title>PaginaDiRicerca</title>
-		<?php session_start(); ?>
+		<?php session_start(); 
+		?>
 	</head>
 <body>
 	<div id="MIOdivRicerca">
@@ -14,16 +15,23 @@
 		</form>
     </div>
 		
-	<div id="divRisultati">
-		<?php 
+	<div id="divRisultati" align="center">
 		
-			$_SESSION
+			<?php
+			
+			if($_SESSION['s'] == 0)
+			{
+			
+			} else
+			{	
+				$vett = unserialize($_SESSION['result']);
+				foreach($vett as $el)
+					
+			}
+			
+			
+			?>
 		
-		
-		
-		
-		
-		?>
     </div>
 </body>
 </html>
