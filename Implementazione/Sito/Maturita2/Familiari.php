@@ -5,7 +5,7 @@
 		<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
 		<!-- mio stile -->
-		<link href="css/mioStile3.css" rel="stylesheet">
+		<link href="css/mioStileFamiliari.css" rel="stylesheet">
 		
         <!-- Font Awesome CSS -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -28,11 +28,11 @@
 		}
 	?>
 <!-- Inizio pagina di Inventario -->
-		<div id="MIOdivInfo">	
+		<div id="MIOdivFamiliari">	
 			<div class="container">
 				<div class="row">
 					<div class="section-title text-center">
-						<h3>Inventario Frigo</h3>
+						<h3>Familiari registrati</h3>
 						<?php
 	
 							$link = mysqli_connect("localhost","root");
@@ -49,18 +49,23 @@
 							
 							
 							//imposto la query
-							$result = mysqli_query($link, "SELECT Nome, dataScadenza FROM prodotto WHERE IDFrigo = ( SELECT ID 
-																													 FROM frigo
-																													 WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
+							$result = mysqli_query($link, "SELECT Nome, Cognome , Sesso , Peso , Altezza , Eta   FROM familiare WHERE IDFrigo = 
+							( SELECT ID 
+							  FROM frigo
+							  WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
 
 							echo "</br>";
 							echo "<table border='3' align='center' >";
-							echo "<tr><td>Nome Prodotto</td><td>Data di Scadenza</td></tr>";
+							echo "<tr><td>Nome</td><td>Cognome</td><td>Sesso</td><td>Peso</td><td>Altezza</td><td>Eta'</td></tr>";
 							while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
 
 								echo "<tr>";
 								echo "<td align='center'>$row[0]</td>";
 								echo "<td align='center'>$row[1]</td>";
+								echo "<td align='center'>$row[2]</td>";
+								echo "<td align='center'>$row[3]</td>";
+								echo "<td align='center'>$row[4]</td>";
+								echo "<td align='center'>$row[5]</td>";
 								echo "</tr>";
 								
 								

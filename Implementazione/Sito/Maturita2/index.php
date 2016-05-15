@@ -243,10 +243,10 @@
 						<?php 
 							if(isset($_SESSION["CodiceFrigo"]))
 							{
-								echo "<a href='#RicercaD' data-toggle='modal'>";
-								echo "<i class='fa fa-search'></i>";
+								echo "<a href='Familiari.php' >";
+								echo "<i class='fa fa-users'></i>";
 								echo "<p>";
-								echo "Ricerca prod. nella dispensa";
+								echo "Familiari";
 								echo "</p>";
 								echo "</a>";
 								

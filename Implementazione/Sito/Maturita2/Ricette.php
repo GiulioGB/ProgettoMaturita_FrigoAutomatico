@@ -5,7 +5,7 @@
 		<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
 		<!-- mio stile -->
-		<link href="css/mioStile3.css" rel="stylesheet">
+		<link href="css/mioStile4.css" rel="stylesheet">
 		
         <!-- Font Awesome CSS -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -20,13 +20,6 @@
 		<META HTTP-EQUIV="Refresh" CONTENT="5">
     </head>
 	<body>
-	<?php 
-		//SE NON SONO PIU' CONNESSO NON POSSO VEDERE QUESTA PAGINA!!
-		if(!isset($_SESSION["CodiceFrigo"]))
-		{
-			header("location: index.php");
-		}
-	?>
 <!-- Inizio pagina di Inventario -->
 		<div id="MIOdivInfo">	
 			<div class="container">
@@ -44,14 +37,10 @@
 
 
 							//seleziono il database da usare
-							mysqli_select_db($link, "data_frigo");
-							
-							
-							
+							mysqli_select_db($link, "prova2");
+
 							//imposto la query
-							$result = mysqli_query($link, "SELECT Nome, dataScadenza FROM prodotto WHERE IDFrigo = ( SELECT ID 
-																													 FROM frigo
-																													 WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
+							$result = mysqli_query($link, "SELECT Nome, dataScadenza FROM prodotti");
 
 							echo "</br>";
 							echo "<table border='3' align='center' >";
@@ -77,6 +66,6 @@
 				</div>                                       
             </div>                		
 		</div>
-<!-- Fine della pagina di Inventario -->
+<!-- Fine della pagina Ricette -->
 	</body>
 </html>

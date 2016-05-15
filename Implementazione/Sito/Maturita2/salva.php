@@ -15,10 +15,10 @@ if(mysqli_connect_errno()){
 
 
 //seleziono il database da usare
-mysqli_select_db($link, "prova2");
+mysqli_select_db($link, "data_frigo");
 
 //imposto la query
-$result = mysqli_query($link, "SELECT Username, Password FROM utenti");
+$result = mysqli_query($link, "SELECT Username, Password FROM frigo");
 
 
 
