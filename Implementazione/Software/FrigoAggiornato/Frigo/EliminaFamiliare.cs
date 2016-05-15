@@ -12,31 +12,44 @@ namespace Frigo
 {
     public partial class EliminaFamiliare : UserControl
     {
+        string nomeFrigo;
+        ConnessioneDB conn = new ConnessioneDB();
+
         public EliminaFamiliare()
         {
             InitializeComponent();
         }
 
+        public EliminaFamiliare(string nome)
+        {
+            InitializeComponent();
+            nomeFrigo = nome;
+        }
+
         private void Annulla_Click(object sender, EventArgs e)
         {
-            AggiungiFamiliare agg = new AggiungiFamiliare();
+            AggiungiFamiliare agg = new AggiungiFamiliare(nomeFrigo);
             Controls.Add(agg);
             agg.BringToFront();
             this.Refresh();
         }
 
-        ConnessioneDB conn = new ConnessioneDB();
+        
         private void Elimina_Click(object sender, EventArgs e)
         {
-            conn.ApriConnessione();
-            string q = "DELETE FROM utenti_frigo WHERE Nome = '" + eliminato.Text + "'";
-            conn.ExecuteQuery(q);
+            //verifico che l'utente inserito sia presente
+            if (conn.verifica(conn.selectID(nomeFrigo), eliminato.Text) != false)
+            {
+                //query per eliminare l'utente verificato il nome e l'appartenenza al frigo
+                string q2 = "DELETE FROM utente WHERE Nome = '" + eliminato.Text + "' AND IDFrigo = " + conn.selectID(nomeFrigo) + "";
+                conn.ExecuteQuery(q2);
 
-            conn.ChiudiConnessione();
-            AggiungiFamiliare agg = new AggiungiFamiliare();
-            Controls.Add(agg);
-            agg.BringToFront();
-            this.Refresh();
+                AggiungiFamiliare agg = new AggiungiFamiliare(nomeFrigo);
+                Controls.Add(agg);
+                agg.BringToFront();
+                this.Refresh();
+            }
+            
         }
     }
 }

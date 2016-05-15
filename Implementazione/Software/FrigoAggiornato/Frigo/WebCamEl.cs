@@ -33,8 +33,8 @@ namespace Frigo
         //public VideoFileWriter writer = new VideoFileWriter();
 
         ConnessioneDB conn = new ConnessioneDB();
-
-        public WebCamEl()
+        string nomeFrigo;
+        public WebCamEl(string nome)
         {
             InitializeComponent();
 
@@ -44,6 +44,8 @@ namespace Frigo
                 comboBox1.Items.Add(VideoCaptureDevice.Name);
             }
             comboBox1.SelectedIndex = 0;
+
+            nomeFrigo = nome;
 
             conn.ApriConnessione();
         }
@@ -104,7 +106,7 @@ namespace Frigo
                 codiceLetto.Text = code;
                 Console.Beep();
                 //newBarCode(this, e);
-                string q = "DELETE FROM prodotti WHERE Codice ='"+prod.getCodice()+"'";
+                string q = "DELETE FROM prodotto WHERE Barcode ='"+prod.getCodice()+"'";
                 conn.ExecuteQuery(q);
                 conn.ChiudiConnessione();
 
@@ -136,7 +138,7 @@ namespace Frigo
         {
             string eliminato = daEliminare.Text;
             daEliminare.Text = "";
-            conn.EliminaManuale(eliminato);
+            conn.EliminaManuale(eliminato,conn.selectID(nomeFrigo));
             Console.Beep();
 
         }

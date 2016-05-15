@@ -12,9 +12,17 @@ namespace Frigo
 {
     public partial class FormUtente : UserControl
     {
+        string nomeFrigo;
+
         public FormUtente()
         {
             InitializeComponent();
+        } 
+
+        public FormUtente(string nome)
+        {
+            InitializeComponent();
+            nomeFrigo = nome;
         }
 
         //metodo di controllo se siamo in presenza di una stringa o di un intero
@@ -47,13 +55,13 @@ namespace Frigo
                 if (IsInteger(textBox1.Text) == false && IsInteger(textBox2.Text) == false && IsInteger(textBox4.Text) == true && IsInteger(textBox5.Text) == true && IsInteger(textBox6.Text) == true)
                 {
                     //salva l'utente
-                    conn.Salva(textBox1, textBox2, comboBox2, textBox4, textBox5, textBox6);
+                    conn.Salva(nomeFrigo,textBox1, textBox2, comboBox2, textBox4, textBox5, textBox6);
 
                     //pulisco il "form"
                     Reset();
 
                     //torno indietro
-                    AggiungiFamiliare agg = new AggiungiFamiliare();
+                    AggiungiFamiliare agg = new AggiungiFamiliare(nomeFrigo);
                     Controls.Add(agg);
                     agg.BringToFront();
                     this.Refresh();

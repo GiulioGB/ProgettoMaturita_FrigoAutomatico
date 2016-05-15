@@ -12,16 +12,17 @@ namespace Frigo
 {
     public partial class MenuIniziale : UserControl
     {
-
-        public MenuIniziale()
+        string nomeFrigo;
+        public MenuIniziale(string nome)
         {
             InitializeComponent();
+            nomeFrigo = nome;
         }
 
 
         private void Aggiungi_Click(object sender, EventArgs e)
         {
-            WebCam sestaSchermata = new WebCam();
+            WebCam sestaSchermata = new WebCam(nomeFrigo);
             Controls.Add(sestaSchermata);
             sestaSchermata.BringToFront();
             this.Refresh();
@@ -29,7 +30,7 @@ namespace Frigo
 
         private void Elimina_Click(object sender, EventArgs e)
         {
-            WebCamEl el = new WebCamEl();
+            WebCamEl el = new WebCamEl(nomeFrigo);
             Controls.Add(el);
             el.BringToFront();
             this.Refresh();
@@ -37,7 +38,7 @@ namespace Frigo
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AggiungiFamiliare fam = new AggiungiFamiliare();
+            AggiungiFamiliare fam = new AggiungiFamiliare(nomeFrigo);
             Controls.Add(fam);
             fam.BringToFront();
             this.Refresh();
@@ -45,10 +46,15 @@ namespace Frigo
 
         private void Avanti_Click(object sender, EventArgs e)
         {
-            MenuIniziale2 Menu2 = new MenuIniziale2();
+            MenuIniziale2 Menu2 = new MenuIniziale2(nomeFrigo);
             Controls.Add(Menu2);
             Menu2.BringToFront();
             this.Refresh();
+        }
+
+        private void MenuIniziale_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

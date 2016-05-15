@@ -148,6 +148,7 @@
             this.MaximumSize = new System.Drawing.Size(1366, 749);
             this.Name = "Registrazione";
             this.Size = new System.Drawing.Size(1366, 749);
+            this.Load += new System.EventHandler(this.Registrazione_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

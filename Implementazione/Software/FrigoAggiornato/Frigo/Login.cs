@@ -51,7 +51,7 @@ namespace Frigo
                 if (c == "si" && c2=="si")
                 {
                     //Vado ai piu
-                    AggiungiFamiliare terzaSchermata = new AggiungiFamiliare();
+                    AggiungiFamiliare terzaSchermata = new AggiungiFamiliare(nomeFrigo);
                     Controls.Add(terzaSchermata);
                     terzaSchermata.BringToFront();
                     this.Refresh();
@@ -66,6 +66,11 @@ namespace Frigo
             {
                 MessageBox.Show("COMPILARE TUTTI I CAMPI");
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

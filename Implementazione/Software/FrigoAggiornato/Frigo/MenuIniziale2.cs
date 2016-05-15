@@ -12,14 +12,16 @@ namespace Frigo
 {
     public partial class MenuIniziale2 : UserControl
     {
-        public MenuIniziale2()
+        string nomeFrigo;
+        public MenuIniziale2(string nome)
         {
             InitializeComponent();
+            nomeFrigo = nome;
         }
 
         private void Indietro_Click(object sender, EventArgs e)
         {
-            MenuIniziale Menu1 = new MenuIniziale();
+            MenuIniziale Menu1 = new MenuIniziale(nomeFrigo);
             Controls.Add(Menu1);
             Menu1.BringToFront();
             this.Refresh();

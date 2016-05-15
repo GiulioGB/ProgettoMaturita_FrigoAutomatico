@@ -32,8 +32,8 @@ namespace Frigo
         //public VideoFileWriter writer = new VideoFileWriter();
 
         ConnessioneDB conn = new ConnessioneDB();
-
-        public WebCam()
+        string nomeFrigo;
+        public WebCam(string nome)
         {
             InitializeComponent();
 
@@ -46,6 +46,7 @@ namespace Frigo
 
             conn.ApriConnessione();
 
+            nomeFrigo = nome;
             
         }  
 
@@ -110,7 +111,6 @@ namespace Frigo
             string[] token = code.Split(';');
 
             
-
             if (code != "" && code != codiceLetto.Text)
             {
                 prod = new Prodotto(token[1], token[0], token[2]);
@@ -118,9 +118,9 @@ namespace Frigo
                 codiceLetto.Text = code;
                 Console.Beep();
                 //newBarCode(this, e);
-                string q = "INSERT INTO prodotti (Codice,Nome,dataScadenza) values('"+prod.getCodice()+"','"+prod.getNome()+"','"+prod.getDataScadenza()+"');";
+                string q = "INSERT INTO prodotto (Barcode,Nome,dataScadenza,reIDFrigo) values('" + prod.getCodice() + "','" + prod.getNome() + "','" + prod.getDataScadenza() + "'," + conn.selectID(nomeFrigo) + ");";
                 conn.ExecuteQuery(q);
-
+                
                 conn.ChiudiConnessione();
             }
             
@@ -150,7 +150,7 @@ namespace Frigo
         {
             string prod = daAggiungere.Text;
             daAggiungere.Text = "";
-            conn.AggiuntaManuale(prod);
+            conn.AggiuntaManuale(prod,conn.selectID(nomeFrigo));
             Console.Beep();
         }
     

@@ -13,6 +13,7 @@ namespace Frigo
     public partial class AggiungiFamiliare : UserControl
     {
         ConnessioneDB conn = new ConnessioneDB();
+        String FrigoScelto;
 
         public AggiungiFamiliare()
         {
@@ -20,11 +21,18 @@ namespace Frigo
 
         }
 
+        public AggiungiFamiliare(string nomeFrigo)
+        {
+            InitializeComponent();
+            FrigoScelto = nomeFrigo;
+        }
+
         private void AggiungiFamiliare_Load(object sender, EventArgs e)
         {
             //carico i familiari aggiunti in precedenza nel DB
-            conn.leggiUtenti(AggiungiUtente1, AggiungiUtente2, AggiungiUtente3, AggiungiUtente4, AggiungiUtente5, AggiungiUtente6);
+            conn.leggiUtenti(FrigoScelto,AggiungiUtente1, AggiungiUtente2, AggiungiUtente3, AggiungiUtente4, AggiungiUtente5, AggiungiUtente6);
             //---
+            
             //non faccio vedere i pulsanti vuoti
             if(AggiungiUtente2.Text=="")
             {
@@ -72,7 +80,7 @@ namespace Frigo
 
         private void Menu_Click(object sender, EventArgs e)
         {
-            MenuIniziale quintaSchermata = new MenuIniziale();
+            MenuIniziale quintaSchermata = new MenuIniziale(FrigoScelto);
             Controls.Add(quintaSchermata);
             quintaSchermata.BringToFront();
             this.Refresh();
@@ -82,7 +90,7 @@ namespace Frigo
         {
             if (AggiungiUtente1.Text == "")
             {
-                FormUtente quartaSchermata = new FormUtente();
+                FormUtente quartaSchermata = new FormUtente(FrigoScelto);
                 Controls.Add(quartaSchermata);
                 quartaSchermata.BringToFront();
                 this.Refresh();
@@ -93,7 +101,7 @@ namespace Frigo
         {
             if (AggiungiUtente2.Text == "")
             {
-                FormUtente quartaSchermata = new FormUtente();
+                FormUtente quartaSchermata = new FormUtente(FrigoScelto);
                 Controls.Add(quartaSchermata);
                 quartaSchermata.BringToFront();
                 this.Refresh();
@@ -104,7 +112,7 @@ namespace Frigo
         {
             if (AggiungiUtente3.Text == "")
             {
-                FormUtente quartaSchermata = new FormUtente();
+                FormUtente quartaSchermata = new FormUtente(FrigoScelto);
                 Controls.Add(quartaSchermata);
                 quartaSchermata.BringToFront();
                 this.Refresh();
@@ -115,7 +123,7 @@ namespace Frigo
         {
             if (AggiungiUtente4.Text == "")
             {
-                FormUtente quartaSchermata = new FormUtente();
+                FormUtente quartaSchermata = new FormUtente(FrigoScelto);
                 Controls.Add(quartaSchermata);
                 quartaSchermata.BringToFront();
                 this.Refresh();
@@ -127,7 +135,7 @@ namespace Frigo
         {
             if(AggiungiUtente5.Text == "")
             {
-                FormUtente quartaSchermata = new FormUtente();
+                FormUtente quartaSchermata = new FormUtente(FrigoScelto);
                 Controls.Add(quartaSchermata);
                 quartaSchermata.BringToFront();
                 this.Refresh();
@@ -139,7 +147,7 @@ namespace Frigo
         {
             if (AggiungiUtente6.Text == "")
             {
-                FormUtente quartaSchermata = new FormUtente();
+                FormUtente quartaSchermata = new FormUtente(FrigoScelto);
                 Controls.Add(quartaSchermata);
                 quartaSchermata.BringToFront();
                 this.Refresh();
@@ -149,7 +157,7 @@ namespace Frigo
 
         private void Elimina_Click(object sender, EventArgs e)
         {
-            EliminaFamiliare el = new EliminaFamiliare();
+            EliminaFamiliare el = new EliminaFamiliare(FrigoScelto);
             Controls.Add(el);
             el.BringToFront();
             this.Refresh();

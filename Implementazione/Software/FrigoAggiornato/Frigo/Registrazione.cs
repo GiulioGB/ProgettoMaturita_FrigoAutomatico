@@ -42,5 +42,10 @@ namespace Frigo
                 this.Refresh();
             }
         }
+
+        private void Registrazione_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
