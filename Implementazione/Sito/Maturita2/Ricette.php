@@ -28,12 +28,7 @@
 						<h3>Inventario Frigo</h3>
 						<?php
 	
-							$link = mysqli_connect("localhost","root");
-
-							if(mysqli_connect_errno()){
-								printf("Connessione al server fallita", mysqli_connect_error());
-								exit();
-							} 
+							@include("connessione.php");
 
 
 							//seleziono il database da usare
