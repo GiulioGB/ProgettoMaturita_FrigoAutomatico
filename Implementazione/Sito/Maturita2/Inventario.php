@@ -44,24 +44,18 @@
 							
 							
 							//imposto la query
-							$result = mysqli_query($link, "SELECT Nome, dataScadenza FROM prodotto WHERE IDFrigo = ( SELECT ID 
+							$result = mysqli_query($link, "SELECT Nome, dataScadenza , Barcode FROM prodotto WHERE IDFrigo = ( SELECT ID 
 																													 FROM frigo
 																													 WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
 
-							echo "</br>";
-							echo "<table border='3' align='center' >";
-							echo "<tr><td>Nome Prodotto</td><td>Data di Scadenza</td></tr>";
+							echo "</br></br>";
+							echo "<table align='center' >";
+							echo "<tr><th>&nbsp;&nbsp; Barcode &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Nome &nbsp;&nbsp; </th><th> &nbsp;&nbsp; Data scadenza &nbsp;&nbsp;</th></tr>";
 							while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
-
-								echo "<tr>";
-								echo "<td align='center'>$row[0]</td>";
-								echo "<td align='center'>$row[1]</td>";
-								echo "</tr>";
-								
-								
+								echo "<tr><td align='center'>".$row["Barcode"]."</td><td align='center'>".$row["Nome"]."</td><td align='center'>".$row["dataScadenza"]."</td></tr>";
 							}
 							echo "</table>";
-							
+							echo "</br></br>";
 							?>
 							</br>
 						</br>

@@ -17,8 +17,10 @@
 
 	//imposto la query
 	$nomeProdotto = $_POST['prodotto'];
-	$result = mysqli_query($link, "SELECT Nome, dataScadenza , Barcode FROM prodotto WHERE Nome = '$nomeProdotto' ");
-	$s = 0;
+	$result = mysqli_query($link, "SELECT Nome, dataScadenza , Barcode FROM prodotto WHERE Nome = '".$nomeProdotto."' AND IDFrigo = ( SELECT ID 
+																													 FROM frigo
+																													 WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
+	
 	$vett = array();
 	
 	
@@ -33,9 +35,7 @@
 	//mysqli_free_result($result); 
 	//header("location:ricerca.php");
 	
-	if($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
-		$s++;
-	}
+	
 	?>
 	
 	<div id="MIOdivRicerca" align="center" >
@@ -53,11 +53,11 @@
 						//	foreach($vett as $a)
 						//		echo $a;
 						//}
-						if($s == 1 )
+						if($row = mysqli_fetch_array( $result, MYSQL_BOTH))
 						{
 						echo "</br></br>";
-						echo "<table border='3' align='center' >";
-						echo "<tr><th>Barcode</th><th>Nome</th><th>Data scadenza</th></tr>";
+						echo "<table align='center' >";
+						echo "<tr><th>&nbsp;&nbsp; Barcode &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Nome &nbsp;&nbsp; </th><th> &nbsp;&nbsp; Data scadenza &nbsp;&nbsp;</th></tr>";
 						
 						while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
 					
