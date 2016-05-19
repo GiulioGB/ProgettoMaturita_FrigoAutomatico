@@ -6,37 +6,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 	</head>
 <body>
-	<?php
 	
-	session_start(); 
-	
-	@include("connessione.php");
-
-	//seleziono il database da usare
-	mysqli_select_db($link, "data_frigo");
-
-	//imposto la query
-	$nomeProdotto = $_POST['prodotto'];
-	$result = mysqli_query($link, "SELECT Nome, dataScadenza , Barcode FROM prodotto WHERE Nome = '".$nomeProdotto."' AND IDFrigo = ( SELECT ID 
-																													 FROM frigo
-																													 WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
-	
-	$vett = array();
-	
-	
-	//if($s == 0)
-	//	$_SESSION['s'] = 0;
-	//else
-	//{
-	//	$_SESSION['s'] = 1;
-	//	$_SESSION['result'] = serialize($vett);
-	//}
-	
-	//mysqli_free_result($result); 
-	//header("location:ricerca.php");
-	
-	
-	?>
 	
 	<div id="MIOdivRicerca" align="center" >
 		<div class="container">
@@ -45,15 +15,19 @@
 					<h3>Risultati ricerca</h3>
 					
 					<?php
-						//if($s == 0)
-						//{
-							
-						//} else
-						//{	
-						//	foreach($vett as $a)
-						//		echo $a;
-						//}
-						if($row = mysqli_fetch_array( $result, MYSQL_BOTH))
+						session_start(); 
+	
+						@include("connessione.php");
+
+						//seleziono il database da usare
+						mysqli_select_db($link, "data_frigo");
+
+						//imposto la query
+						$nomeProdotto = $_POST['prodotto'];
+						$result = mysqli_query($link, "SELECT Nome, dataScadenza , Barcode FROM prodotto WHERE Nome = '".$nomeProdotto."' AND IDFrigo = ( SELECT ID 
+																																		 FROM frigo
+																																		 WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
+						if( mysqli_num_rows ( $result ) > 0)
 						{
 						echo "</br></br>";
 						echo "<table align='center' >";
