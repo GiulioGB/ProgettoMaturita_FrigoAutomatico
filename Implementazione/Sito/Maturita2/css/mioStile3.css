@@ -42,6 +42,24 @@ body {
      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+table {
+    border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td{
+   border-bottom: 1px solid #ddd;
+   border: 1px solid black;
+}
+
+th {
+    background-color: #28abe3;
+    color: white;
+	border: 1px solid black;
+}
+
+
+
 /**** Start Section Title Section ****/
 
 .section-title h3{

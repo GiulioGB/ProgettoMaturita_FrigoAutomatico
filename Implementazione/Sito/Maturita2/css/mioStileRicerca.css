@@ -77,10 +77,27 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+table {
+    border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td{
+   border-bottom: 1px solid #ddd;
+   border: 1px solid black;
+}
+
+th{
+    background-color: #72bf48;
+    color: white;
+	border: 1px solid black;
+}
+
+
 /**** Start Section Title Section ****/
 
 .section-title h3{
-    color: #107865 !important;
+    color: #72bf48 !important;
     //font-style: italic;
     font-size: 28px;
     font-family: 'Oswald', sans-serif;
