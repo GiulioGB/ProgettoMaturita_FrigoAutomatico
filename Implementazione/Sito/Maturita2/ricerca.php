@@ -14,7 +14,7 @@
 						<h3>Ricerca</h3> <br/>
 						<p> Inserisci il nome del prodotto: &nbsp;&nbsp;&nbsp; <input type="text" name="prodotto"> </p> <br/>
 						<input type="submit" name="bRicerca" id="bRicerca" value="Ricerca"> &nbsp;&nbsp;&nbsp; 
-						<input type="button" id="torna" name="torna" value="HOME_PAGE" onClick="window.location.href ='index.php'">
+						<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 					</form>
 				</div>
 			</div>

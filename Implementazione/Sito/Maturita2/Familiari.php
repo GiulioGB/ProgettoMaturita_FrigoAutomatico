@@ -74,7 +74,7 @@
 							} echo "Non ci sono familiari registrati"."</br></br>";
 							
 							?>
-						<input type="button" id="torna" name="torna" value="HOME_PAGE" onClick="window.location.href ='index.php'">
+						<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 						</br>
 						</br>
 					</div>

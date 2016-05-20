@@ -49,7 +49,7 @@
 					?>
 					
 					<input type="button" id="torna" name="torna" value="Ricerca" onClick="window.location.href ='ricerca.php'"> &nbsp;&nbsp;&nbsp;
-					<input type="button" id="torna" name="torna" value="HOME_PAGE" onClick="window.location.href ='index.php'"> </br></br>
+					<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'"> </br></br>
 				</div>
 			</div>
 		</div>
