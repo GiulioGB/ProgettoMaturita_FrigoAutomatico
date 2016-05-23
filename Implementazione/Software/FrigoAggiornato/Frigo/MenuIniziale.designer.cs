@@ -158,6 +158,7 @@
             this.Inventario.Size = new System.Drawing.Size(300, 300);
             this.Inventario.TabIndex = 1;
             this.Inventario.UseVisualStyleBackColor = true;
+            this.Inventario.Click += new System.EventHandler(this.Inventario_Click);
             // 
             // MenuIniziale
             // 

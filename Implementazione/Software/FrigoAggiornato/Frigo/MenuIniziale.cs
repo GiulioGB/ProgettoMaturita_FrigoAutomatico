@@ -56,5 +56,13 @@ namespace Frigo
         {
 
         }
+
+        private void Inventario_Click(object sender, EventArgs e)
+        {
+            Inventario inv = new Inventario(nomeFrigo);
+            Controls.Add(inv);
+            inv.BringToFront();
+            this.Refresh();
+        }
     }
 }

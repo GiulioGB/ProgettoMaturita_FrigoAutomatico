@@ -113,13 +113,14 @@
             this.info.TabIndex = 16;
             this.info.Text = "?";
             this.info.UseVisualStyleBackColor = false;
+            this.info.Click += new System.EventHandler(this.info_Click);
             // 
             // daEliminare
             // 
             this.daEliminare.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daEliminare.Location = new System.Drawing.Point(413, 580);
             this.daEliminare.Name = "daEliminare";
-            this.daEliminare.Size = new System.Drawing.Size(541, 41);
+            this.daEliminare.Size = new System.Drawing.Size(541, 42);
             this.daEliminare.TabIndex = 15;
             // 
             // cam
@@ -204,7 +205,8 @@
             this.codiceLetto.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.codiceLetto.Location = new System.Drawing.Point(19, 317);
             this.codiceLetto.Name = "codiceLetto";
-            this.codiceLetto.Size = new System.Drawing.Size(378, 41);
+            this.codiceLetto.ReadOnly = true;
+            this.codiceLetto.Size = new System.Drawing.Size(378, 42);
             this.codiceLetto.TabIndex = 24;
             // 
             // label3

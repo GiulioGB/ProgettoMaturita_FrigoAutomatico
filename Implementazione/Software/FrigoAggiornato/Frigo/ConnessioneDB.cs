@@ -8,7 +8,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Security.Cryptography;
-
+//using System.Data.SqlServerCe;
 namespace Frigo
 {
     class ConnessioneDB
@@ -364,7 +364,31 @@ namespace Frigo
         //-FINE GESTIONE PRODOTTI
         //---
         
+        public void VisualizzaTutto(int id,DataGridView x)
+        {
 
+            ApriConnessione();
+            string s = "SELECT Nome, Barcode, dataScadenza FROM prodotto WHERE IDFrigo = "+id+"";
+            
+
+            mcd = new MySqlCommand(s, mcon);
+            mdr = mcd.ExecuteReader();
+            string y;
+            int i=0;
+            while (mdr.Read())
+            {
+                y = mdr["dataScadenza"].ToString();
+                y = y.Substring(0, 10);
+                x.DefaultCellStyle.Font = new Font("Arial", 16F, GraphicsUnit.Pixel);
+                x.Rows.Add(mdr["Nome"].ToString(), y, mdr["Barcode"].ToString());
+                //x.Rows.Add(mdr["Nome"].ToString(),mdr["dataScdenza"].ToString(),mdr["Barcode"].ToString());
+                /*x.Text += "Nome prodotto "+mdr["Nome"].ToString()+" ";
+                x.Text += "Barcode "+mdr["Barcode"].ToString()+" ";
+                
+                x.Text += "Data di scadenza " + y + "\r\n";*/
+            }
+           ChiudiConnessione();
+        }
 
     }
 }

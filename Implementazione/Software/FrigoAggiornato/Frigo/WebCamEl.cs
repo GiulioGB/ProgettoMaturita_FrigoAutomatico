@@ -142,5 +142,10 @@ namespace Frigo
             Console.Beep();
 
         }
+
+        private void info_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Posiziona il codice a barre del tuo prodotto davanti alla Webcam, non toglierlo fino al 'beep' che ne indicherà l' avvenuta eliminazione, oppure inserisci il nome del prodotto da eliminare dove indicato", "Info", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
     }
 }
