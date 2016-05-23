@@ -375,6 +375,7 @@ namespace Frigo
             mdr = mcd.ExecuteReader();
             string y;
             int i=0;
+            x.Rows.Clear();
             while (mdr.Read())
             {
                 y = mdr["dataScadenza"].ToString();

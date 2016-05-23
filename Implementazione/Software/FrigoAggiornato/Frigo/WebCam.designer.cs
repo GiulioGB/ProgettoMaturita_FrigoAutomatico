@@ -95,7 +95,7 @@
             this.daAggiungere.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daAggiungere.Location = new System.Drawing.Point(412, 587);
             this.daAggiungere.Name = "daAggiungere";
-            this.daAggiungere.Size = new System.Drawing.Size(541, 41);
+            this.daAggiungere.Size = new System.Drawing.Size(541, 42);
             this.daAggiungere.TabIndex = 7;
             // 
             // timer1
@@ -205,7 +205,7 @@
             this.codiceLetto.Location = new System.Drawing.Point(19, 317);
             this.codiceLetto.Name = "codiceLetto";
             this.codiceLetto.ReadOnly = true;
-            this.codiceLetto.Size = new System.Drawing.Size(378, 41);
+            this.codiceLetto.Size = new System.Drawing.Size(378, 42);
             this.codiceLetto.TabIndex = 14;
             // 
             // label3
