@@ -5,7 +5,7 @@
 		<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
 		<!-- mio stile -->
-		<link href="css/mioStile.css" rel="stylesheet">
+		<link href="css/mioStileLogin.css" rel="stylesheet">
 		
         <!-- Font Awesome CSS -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 									<label>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Password" name="Psw" id="Psw" required/></label>
 									<br/>
 									<br/>
-									<input type="submit" id="submit" name="submit" value="Accedi"/>&nbsp;&nbsp;<input type="reset" id="reset" name="reset" value="Cancella">&nbsp;&nbsp;<input type="button" id="ritorna" name="ritorna" value="HOME_PAGE" onClick="window.location.href ='index.php'">
+									<input type="submit" id="submit" name="submit" value="Accedi"/>&nbsp;&nbsp;<input type="reset" id="reset" name="reset" value="Cancella">&nbsp;&nbsp;<input type="button" id="ritorna" name="ritorna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 								</form>
 								<br/>
 								<br/>

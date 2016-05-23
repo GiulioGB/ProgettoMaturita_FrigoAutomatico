@@ -1,11 +1,11 @@
 <html>
 	<head>
-		<title>Inventario Frigo</title>
+		<title>Lista della spesa</title>
 		
 		<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
 		<!-- mio stile -->
-		<link href="css/mioStileInventario.css" rel="stylesheet">
+		<link href="css/mioStileSpesa.css" rel="stylesheet">
 		
         <!-- Font Awesome CSS -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="section-title text-center">
-						<h3>Inventario Frigo</h3>
+						<h3>Lista della spesa</h3>
 						<?php
 	
 							@include("connessione.php");

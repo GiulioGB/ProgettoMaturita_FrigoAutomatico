@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Frigo & Dispensa</title>
+        <title>Home page</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="logo text-center">
-                            <h1>Frigo & Dispensa</h1>
+                            <h1>Frigo Automatico</h1>
                             <span>Gestire il tutto in modo automatico SI PUO'</span>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
 						<?php 
 							if(isset($_SESSION["CodiceFrigo"]))
 							{
-								echo "<a href='#ListaS' data-toggle='modal'>";
+								echo "<a href='listaSpesa.php'>";
 								echo "<i class='fa fa-shopping-cart'></i>";
 								echo "<p>";
 								echo "Lista della spesa";
@@ -290,136 +290,6 @@
         </div>
         <!-- End Copyright Section -->
         
-       
-        
-        
-        <!-- Inizio pagina Ricerca nel Frigo -->
-        <div class="section-modal modal fade" id="RicercaF" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Ricerca</h3>
-                            <p>Dopo aver scritto il nome del prodotto che desideri cercare all'interno del frigo, premi sul pulsante cerca</p>
-                        </div>
-                    </div>
-                </div>
-			</div>
-		</div>
-        <!-- Fine pagina Ricerca nel Frigo -->
-        
-        
-        <!-- Inizio pagina Lista della Spesa -->
-        <div class="section-modal modal fade" id="ListaS" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Lista della spesa</h3>
-                            <p>Qui di seguito la lista di tutti gli alimenti da comprare al più presto</p>
-                        </div>
-                    </div>
-                </div>
-			</div>
-		</div>
-        <!-- Fine pagina Lista della Spesa -->
-                     
-        
-        <!-- Inizio pagina inventario nella dispensa -->
-        <div class="section-modal modal fade" id="InventarioD" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Inventario della dispensa</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>                 
-                </div>                
-            </div>
-        </div>
-        <!-- Fine pagina inventario nella dispensa -->
-        
-        
-        
-        <!-- Inizio pagina ricerca nella dispensa -->
-        <div class="section-modal modal fade contact" id="RicercaD" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Ricerca</h3>
-                            <p>Dopo aver scritto il nome del prodotto che desideri cercare all'interno della dispensa, premi sul pulsante cerca</p>
-                        </div>
-                    </div>                  
-                </div>                
-            </div>
-        </div>
-        <!-- Fine pagina ricerca nella dispensa -->
-        
-        
-         <!-- Inizio pagina Info -->
-        <div class="section-modal modal fade contact" id="Info" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Di cosa si tratta?</h3>
-                            <p>
-							<h4>Premessa</h4>
-							Questo sito nasc come "supporto" al nostro SW raggiungibile al seguente link, e alla nostra applicazione disponibile per ora solo pr dispositivi Android raggiungibile tramite quest' altro link
-							<h4>Cosa si può fare grazie a questo sito ?</h4>
-							Funzioni semplici, ma che possono davero semplificare il modo con cui si è soliti "interagire" con frigo e dispensa di cui tutte le cucine sono provviste. Dimenticati di fogliettini e penna per segnarti ciò che devi comprare al supermercato, dimentica quella fastidiosa brina che i forma nelle calde giornate d' estate perchè hai aperto il frigo numerose volte per verificarne il contenuto
-							<h4>Elenco funzioni</h4>
-							<b>Visualizza contenuto del frigo: </b><br/>Tramite questa funzione sarà possibile visualizzare l'elenco di tutti gli alimenti contenuti nel frigo con tutti i relativi dettagli (es: nome,data di scadenza ... ).<br/>
-							<b>Visualizza contenuto della dispensa: </b><br/>Tramite questa funzione sarà possibile visualizzare l'elendo di tutti gli alimenti contenuti nella dispensa con tutti i relativi dettagli (es: nome, data di scadenza...).<br/>
-							<b>Ricerca prodotti nella dispensa: </b><br/>Tramite questa funzione sarà possibile ricercare un prodotto per Nome, così da verificarne la presenza o meno all' interno del frigo.<br/>
-							<b>Ricerca prodotti nella dispensa: </b><br/>Tramite questa funzione sarà possibile ricercare un prodotto per Nome, così da verificarna la presenza o meno all' interno della dspensa.<br/>
-							<b>Visualizzazione lista della spesa: </b><br/>"SE" un prodotto dovesse mancare o in frigo o nella dispensa sarà possibile aggiungerlo alla lista della spesa dal SW per poi visualizzarlo mentre si è al supermercato direttamente online.<br/>
-							<h4>Piccoli accorgimenti</h4>
-							Per garantire il corretto utilizzo delle funzioni, bisognerà prima di tutto effettuare la log-in utilizzando l' apposita sezione.
-							</p>
-                        </div>
-                    </div>                                       
-                </div>                
-            </div>
-        </div>
-        <!-- Fine pagina Info -->
         
     </body>
     

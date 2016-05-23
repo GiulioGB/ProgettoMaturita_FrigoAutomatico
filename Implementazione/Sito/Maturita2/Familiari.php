@@ -35,12 +35,7 @@
 						<h3>Familiari registrati</h3>
 						<?php
 	
-							$link = mysqli_connect("localhost","root");
-
-							if(mysqli_connect_errno()){
-								printf("Connessione al server fallita", mysqli_connect_error());
-								exit();
-							} 
+							@include("connessione.php");
 
 
 							//seleziono il database da usare
@@ -53,29 +48,33 @@
 							( SELECT ID 
 							  FROM frigo
 							  WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
+							
+							
+							if( mysqli_num_rows ( $result ) > 0)
+							{
+								echo "</br></br>";
+								echo "<table align='center' >";
+								echo "<tr><th> &nbsp;&nbsp; Nome &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Cognome &nbsp;&nbsp;</th><th>Sesso</th><th> &nbsp;&nbsp; Peso &nbsp;&nbsp; </th><th> &nbsp;&nbsp; Altezza &nbsp;&nbsp; </th><th> &nbsp;&nbsp; Eta' &nbsp;&nbsp; </th></tr>";
+								while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
 
-							echo "</br>";
-							echo "<table border='3' align='center' >";
-							echo "<tr><td>Nome</td><td>Cognome</td><td>Sesso</td><td>Peso</td><td>Altezza</td><td>Eta'</td></tr>";
-							while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
-
-								echo "<tr>";
-								echo "<td align='center'>$row[0]</td>";
-								echo "<td align='center'>$row[1]</td>";
-								echo "<td align='center'>$row[2]</td>";
-								echo "<td align='center'>$row[3]</td>";
-								echo "<td align='center'>$row[4]</td>";
-								echo "<td align='center'>$row[5]</td>";
-								echo "</tr>";
-								
-								
-							}
-							echo "</table>";
+									echo "<tr>";
+									echo "<td align='center'>$row[0]</td>";
+									echo "<td align='center'>$row[1]</td>";
+									echo "<td align='center'>$row[2]</td>";
+									echo "<td align='center'>$row[3]</td>";
+									echo "<td align='center'>$row[4]</td>";
+									echo "<td align='center'>$row[5]</td>";
+									echo "</tr>";
+									
+									
+								}
+								echo "</table>";
+								echo "</br></br>";
+							
+							} echo "Non ci sono familiari registrati"."</br></br>";
 							
 							?>
-							</br>
-						</br>
-						<input type="button" id="torna" name="torna" value="HOME_PAGE" onClick="window.location.href ='index.php'">
+						<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 						</br>
 						</br>
 					</div>

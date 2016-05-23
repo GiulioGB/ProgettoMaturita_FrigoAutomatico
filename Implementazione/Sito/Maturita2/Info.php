@@ -5,7 +5,7 @@
 		<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
 		<!-- mio stile -->
-		<link href="css/mioStile2.css" rel="stylesheet">
+		<link href="css/mioStileInfo.css" rel="stylesheet">
 		
         <!-- Font Awesome CSS -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
 						Per garantire il corretto utilizzo delle funzioni, bisognera' prima di tutto effettuare la log-in utilizzando l' apposita sezione.
 						</br>
 						</br>
-						<input type="button" id="torna" name="torna" value="HOME_PAGE" onClick="window.location.href ='index.php'">
+						<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 						</br>
 						</br>
 					</div>

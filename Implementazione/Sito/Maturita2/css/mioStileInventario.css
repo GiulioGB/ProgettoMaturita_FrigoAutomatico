@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
 
 
-#MIOdivFamiliari{
+#MIOdivInfo{
 	width: auto;
 	height: auto;
 	background-color: rgba(255, 255, 255, 0.85);
@@ -12,7 +12,7 @@
 	right: 5%;
 	top: 15%;
     margin-bottom: 4.7%;
-    border-color: #058770;
+    border-color: #266f8e;
     border-style:double;
     border-width:thick;
     
@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color: #0eceab;
+    background-color: #28abe3;
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 50%;
@@ -29,10 +29,10 @@ body {
 
 #torna{
 
-    background-color: #0eceab;
+    background-color: #28abe3;
     width: auto;
     height: 50px;
-    border: 2px solid #058770;
+    border: 2px solid #266f8e;
     font-family: Cambria;
     font-size:16px;
     font-weight:bold;
@@ -42,7 +42,6 @@ body {
      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	 cursor:pointer;
 }
-
 
 table {
     border: 1px solid black;
@@ -54,16 +53,18 @@ td{
    border: 1px solid black;
 }
 
-th{
-    background-color: #0eceab;
+th {
+    background-color: #28abe3;
     color: white;
 	border: 1px solid black;
 }
 
+
+
 /**** Start Section Title Section ****/
 
 .section-title h3{
-    color: #058770 !important;
+    color: #266f8e !important;
     //font-style: italic;
     font-size: 28px;
     font-family: 'Oswald', sans-serif;

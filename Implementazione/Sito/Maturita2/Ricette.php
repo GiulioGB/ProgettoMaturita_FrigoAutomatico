@@ -5,7 +5,7 @@
 		<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
 		<!-- mio stile -->
-		<link href="css/mioStile4.css" rel="stylesheet">
+		<link href="css/mioStileRicette.css" rel="stylesheet">
 		
         <!-- Font Awesome CSS -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -28,12 +28,7 @@
 						<h3>Inventario Frigo</h3>
 						<?php
 	
-							$link = mysqli_connect("localhost","root");
-
-							if(mysqli_connect_errno()){
-								printf("Connessione al server fallita", mysqli_connect_error());
-								exit();
-							} 
+							@include("connessione.php");
 
 
 							//seleziono il database da usare
@@ -59,7 +54,7 @@
 							?>
 							</br>
 						</br>
-						<input type="button" id="torna" name="torna" value="HOME_PAGE" onClick="window.location.href ='index.php'">
+						<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 						</br>
 						</br>
 					</div>
