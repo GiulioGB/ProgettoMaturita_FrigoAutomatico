@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 25, 2016 alle 15:41
+-- Creato il: Mag 25, 2016 alle 15:54
 -- Versione del server: 5.7.9
 -- Versione PHP: 5.6.16
 
@@ -100,7 +100,7 @@ DROP TABLE IF EXISTS `prodotto`;
 CREATE TABLE IF NOT EXISTS `prodotto` (
   `ID` int(5) NOT NULL AUTO_INCREMENT,
   `EAN` varchar(50) DEFAULT NULL,
-  `Nome` varchar(20) NOT NULL,
+  `NomeAlimento` varchar(20) NOT NULL,
   `dataScadenza` date DEFAULT NULL,
   `IDFrigo` int(5) NOT NULL,
   `luogoProduzione` varchar(20) NOT NULL,
@@ -108,6 +108,15 @@ CREATE TABLE IF NOT EXISTS `prodotto` (
   PRIMARY KEY (`ID`),
   KEY `IDFrigo` (`IDFrigo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `prodotto`
+--
+
+INSERT INTO `prodotto` (`ID`, `EAN`, `NomeAlimento`, `dataScadenza`, `IDFrigo`, `luogoProduzione`, `Quantita`) VALUES
+(1, 'hfg', 'latte', '2016-05-11', 4, 'milano', 1),
+(2, 'sdfghj', 'latte', '2016-05-23', 4, 'Roma', 2),
+(3, 'fgd', 'pollo', '2016-05-03', 4, 'roma', 1);
 
 --
 -- Limiti per le tabelle scaricate
