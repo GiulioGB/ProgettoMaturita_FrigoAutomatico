@@ -111,17 +111,20 @@ namespace Frigo
             string[] token = code.Split(';');
 
             
-            if (code != "" && code != codiceLetto.Text)
+            if (code != "")
             {
-                prod = new Prodotto(token[1], token[0], token[2]);
+                conn.VerificaAlimento(token[1]);
+                conn.aggiornaPos(token[0], token[1], token[2],token[3],conn.selectID(nomeFrigo).ToString());
+                                
+                //prod = new Prodotto(token[1], token[0], token[2]);
                 barCode = code;
                 codiceLetto.Text = code;
                 Console.Beep();
                 //newBarCode(this, e);
-                string q = "INSERT INTO prodotto (Barcode,Nome,dataScadenza,reIDFrigo) values('" + prod.getCodice() + "','" + prod.getNome() + "','" + prod.getDataScadenza() + "'," + conn.selectID(nomeFrigo) + ");";
-                conn.ExecuteQuery(q);
+                //string q = "INSERT INTO prodotto (EAN,NomeAlimento,dataScadenza,luogoProduzione,Quantita,IDFrigo) values('" + token[0] + "','" + token[1] + "','" + token[2]+ "','" + token[3] + "','"+1+"','"+conn.selectID(nomeFrigo)+"');";
+                //conn.ExecuteQuery(q);
                 
-                conn.ChiudiConnessione();
+                //conn.ChiudiConnessione();
             }
             
 

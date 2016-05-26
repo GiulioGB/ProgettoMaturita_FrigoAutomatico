@@ -99,16 +99,18 @@ namespace Frigo
 
 
 
-            if (code != "" && code != codiceLetto.Text)
+            if (code != "" )
             {
-                prod = new Prodotto(token[1], token[0], token[2]);
+                //prod = new Prodotto(token[1], token[0], token[2]);
+                conn.aggiornaNeg(token[0], token[1], token[2], token[3], conn.selectID(nomeFrigo).ToString());
+
                 barCode = code;
                 codiceLetto.Text = code;
                 Console.Beep();
                 //newBarCode(this, e);
-                string q = "DELETE FROM prodotto WHERE Barcode ='"+prod.getCodice()+"'";
-                conn.ExecuteQuery(q);
-                conn.ChiudiConnessione();
+                //string q = "DELETE FROM prodotto WHERE Barcode ='"+prod.getCodice()+"'";
+                //conn.ExecuteQuery(q);
+                //conn.ChiudiConnessione();
 
             }
         }

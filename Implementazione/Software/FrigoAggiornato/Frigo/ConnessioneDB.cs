@@ -349,15 +349,178 @@ namespace Frigo
         //aggiungi prodotto 2
         public void AggiuntaManuale(string nome,int IDFrigo)
         {
-            string q = "INSERT INTO prodotto (Nome,dataScadenza,IDFrigo) values('"+nome+"','0000-00-00','"+IDFrigo+"')";
-            ExecuteQuery(q);
+            VerificaAlimento(nome);
+
+            ApriConnessione();
+
+            string query = "SELECT NomeAlimento,Quantita FROM prodotto WHERE NomeAlimento ='"+nome+"' AND IDFrigo = '"+IDFrigo+"'";
+            mcd = new MySqlCommand(query, mcon);
+            mdr = mcd.ExecuteReader();
+
+            
+            if(mdr.Read())
+            {
+                string q = mdr["Quantita"].ToString();
+                int nuovaQ = Int32.Parse(q);
+                nuovaQ++;
+                q = nuovaQ.ToString();
+            
+                ChiudiConnessione();
+
+                string update = "UPDATE prodotto SET Quantita = '"+q+"' WHERE NomeAlimento = '"+nome+"'";
+                ExecuteQuery(update);
+            }
+            else
+            {
+                ChiudiConnessione();
+
+                string qu = "INSERT INTO prodotto (NomeAlimento,Quantita,IDFrigo) values('" + nome + "'," + 1 + ",'" + IDFrigo + "')";
+                ExecuteQuery(qu);
+            }
+            
         }
 
         //elimina prodotto 2
         public void EliminaManuale(string nome,int IDFrigo)
         {
-            string q = "DELETE FROM prodotto WHERE nome='" + nome + "' AND IDFrigo = "+IDFrigo+"";
-            ExecuteQuery(q);
+            ApriConnessione();
+            string qu = "SELECT Quantita FROM prodotto WHERE NomeAlimento = '" + nome + "' AND IDFrigo = '" + IDFrigo + "'";
+            mcd = new MySqlCommand(qu, mcon);
+            mdr = mcd.ExecuteReader();
+            if(mdr.Read())
+            {
+                int quantita = Int32.Parse(mdr["Quantita"].ToString());
+
+                if(quantita != 1)
+                {
+                    string q = mdr["Quantita"].ToString();
+                    int nuovaQ = Int32.Parse(q);
+                    nuovaQ--;
+                    q = nuovaQ.ToString();
+
+                    ChiudiConnessione();
+
+                    string update = "UPDATE prodotto SET Quantita = '" + q + "' WHERE NomeAlimento = '" + nome + "'";
+                    ExecuteQuery(update);
+                    
+                }
+                else
+                {
+                    ChiudiConnessione();
+
+                    string query = "DELETE FROM prodotto WHERE NomeAlimento = '"+nome+"' AND IDFrigo = '"+IDFrigo+"'";
+                    ExecuteQuery(query);
+                }
+
+
+            }
+        }
+
+        //controlla presenza in alimento
+        public void VerificaAlimento(string nome)
+        {
+            ApriConnessione();
+
+            //string controllo = "no";
+
+            string query = "SELECT Nome FROM alimento WHERE Nome='" + nome + "'";
+
+            mcd = new MySqlCommand(query, mcon);
+            mdr = mcd.ExecuteReader();
+            if(mdr.Read())
+            {
+                //controllo = "si";
+            }
+            else
+            {
+                ChiudiConnessione();
+
+                string query2 = "INSERT INTO alimento(Nome) values('"+nome+"')";
+                ExecuteQuery(query2);
+            }
+            
+            ChiudiConnessione();
+        }
+
+        //Aggiorna se gia presente aumentando la quantita
+        public void aggiornaPos(string EAN, string Nome, string scadenza,string produzione,string IDFrigo)
+        {
+            ApriConnessione();
+
+            string query = "SELECT dataScadenza,Quantita FROM prodotto WHERE NomeAlimento='" + Nome + "' AND IDFrigo='" + IDFrigo + "'";
+            mcd = new MySqlCommand(query, mcon);
+            mdr = mcd.ExecuteReader();
+            if(mdr.Read())
+            {
+                string daPassare = mdr["dataScadenza"].ToString();
+                //string x = mdr["dataScadenza"].ToString();
+                //x = x.Substring(0, 10);
+
+                //string[] token = x.Split('/');
+
+                //string giorno, mese, anno;
+                //giorno = token[0];
+                //mese = token[1];
+                //anno = token[2];
+                //x = anno + "-" + mese + "-" + giorno;
+
+                if(daPassare == scadenza)
+                {
+                    string q = mdr["Quantita"].ToString(); 
+                    int nuovaQ = Int32.Parse(q);
+                    nuovaQ++;
+                    q = nuovaQ.ToString();
+
+                    ChiudiConnessione();
+
+                    string query3 = "UPDATE prodotto SET Quantita = '"+q+"' WHERE dataScadenza ='"+scadenza+"' AND NomeAlimento = '"+Nome+"'";
+                    ExecuteQuery(query3);
+                }
+                else
+                {
+                    ChiudiConnessione();
+                    string query4 = "INSERT INTO prodotto (EAN,NomeAlimento,dataScadenza,luogoProduzione,Quantita,IDFrigo) values('" + EAN + "','" + Nome + "','" + scadenza+ "','" + produzione + "','"+1+"','"+IDFrigo+"');";
+                    ExecuteQuery(query4);
+                }
+                
+            }
+            else
+            {
+                ChiudiConnessione();
+                string query4 = "INSERT INTO prodotto (EAN,NomeAlimento,dataScadenza,luogoProduzione,Quantita,IDFrigo) values('" + EAN + "','" + Nome + "','" + scadenza + "','" + produzione + "','" + 1 + "','" + IDFrigo + "');";
+                ExecuteQuery(query4);
+            }
+        }
+
+        //Aggiorna se presente diminuendo la quantita
+        public void aggiornaNeg(string EAN, string Nome, string scadenza, string produzione, string IDFrigo)
+        {
+            ApriConnessione();
+
+            string query = "SELECT dataScadenza,Quantita FROM prodotto WHERE NomeAlimento='" + Nome + "' AND IDFrigo='" + IDFrigo + "'";
+            mcd = new MySqlCommand(query, mcon);
+            mdr = mcd.ExecuteReader();
+            if (mdr.Read())
+            {
+                int quantita = Int32.Parse(mdr["Quantita"].ToString());
+                
+                if (quantita != 1)
+                {
+                    quantita--;
+
+                    ChiudiConnessione();
+
+                    string query3 = "UPDATE prodotto SET Quantita = " + quantita + " WHERE dataScadenza ='" + scadenza + "' AND NomeAlimento = '" + Nome + "' AND IDFrigo = '"+IDFrigo+"'";
+                    ExecuteQuery(query3);
+                }
+                else
+                {
+                    ChiudiConnessione();
+                    string query4 = "DELETE FROM prodotto WHERE  dataScadenza ='" + scadenza + "' AND NomeAlimento = '" + Nome + "' AND IDFrigo = '" + IDFrigo + "'";
+                    ExecuteQuery(query4);
+                }
+
+            }
         }
 
         //---
@@ -366,7 +529,6 @@ namespace Frigo
         
         public void VisualizzaTutto(int id,DataGridView x)
         {
-
             ApriConnessione();
             string s = "SELECT Nome, Barcode, dataScadenza FROM prodotto WHERE IDFrigo = "+id+"";
             
@@ -390,6 +552,8 @@ namespace Frigo
             }
            ChiudiConnessione();
         }
+
+
 
     }
 }
