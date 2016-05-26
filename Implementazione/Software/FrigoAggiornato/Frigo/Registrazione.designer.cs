@@ -42,10 +42,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(58, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 61);
+            this.label1.Size = new System.Drawing.Size(389, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRAZIONE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -53,32 +53,33 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cambria", 20.25F);
             this.label2.Location = new System.Drawing.Point(63, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 47);
+            this.label2.Size = new System.Drawing.Size(147, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome Frigo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Cambria", 20.25F);
             this.label3.Location = new System.Drawing.Point(63, 255);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 47);
+            this.label3.Size = new System.Drawing.Size(127, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Cambria", 20.25F);
             this.label4.Location = new System.Drawing.Point(63, 365);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(290, 47);
+            this.label4.Size = new System.Drawing.Size(245, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "Conferma password";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox1
             // 
