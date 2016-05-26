@@ -12,8 +12,8 @@
 				<div class="section-title text-center">
 					<form action="cerca.php" method="POST">
 						<h3>Ricerca</h3> <br/>
-						<p> Inserisci il nome del prodotto: &nbsp;&nbsp;&nbsp; <input type="text" name="prodotto"> </p> <br/>
-						<input type="submit" name="bRicerca" id="bRicerca" value="Ricerca"> &nbsp;&nbsp;&nbsp; 
+						<p> Inserisci il nome del prodotto: &nbsp;&nbsp;&nbsp; <input type="text" name="prodotto" required> </p> <br/>
+						<input type="submit" name="bRicerca" id="bRicerca" value="RICERCA"> &nbsp;&nbsp;&nbsp; 
 						<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 					</form>
 				</div>

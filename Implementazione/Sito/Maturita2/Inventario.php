@@ -44,15 +44,15 @@
 							
 							
 							//imposto la query
-							$result = mysqli_query($link, "SELECT Nome, dataScadenza , Barcode FROM prodotto WHERE IDFrigo = ( SELECT ID 
+							$result = mysqli_query($link, "SELECT NomeAlimento, dataScadenza , EAN , luogoProduzione , Quantita FROM prodotto WHERE IDFrigo = ( SELECT ID 
 																													 FROM frigo
 																													 WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
 
 							echo "</br></br>";
 							echo "<table align='center' >";
-							echo "<tr><th>&nbsp;&nbsp; Barcode &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Nome &nbsp;&nbsp; </th><th> &nbsp;&nbsp; Data scadenza &nbsp;&nbsp;</th></tr>";
+							echo "<tr><th>&nbsp;&nbsp; EAN &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Nome &nbsp;&nbsp; </th><th> &nbsp;&nbsp; Data scadenza &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Luogo produzione &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Quantita' &nbsp;&nbsp;</th></tr>";
 							while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
-								echo "<tr><td align='center'>".$row["Barcode"]."</td><td align='center'>".$row["Nome"]."</td><td align='center'>".$row["dataScadenza"]."</td></tr>";
+								echo "<tr><td align='center'>".$row["EAN"]."</td><td align='center'>".$row["NomeAlimento"]."</td><td align='center'>".$row["dataScadenza"]."</td><td align='center'>".$row["luogoProduzione"]."</td><td align='center'>".$row["Quantita"]."</td></tr>";
 							}
 							echo "</table>";
 							echo "</br></br>";

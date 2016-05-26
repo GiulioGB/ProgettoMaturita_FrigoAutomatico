@@ -41,7 +41,7 @@
 							echo "</br></br>";
 							?>
 					
-					<input type="button" id="torna" name="torna" value="INDIETRO" onClick="window.location.href ='ricerca.php'"> &nbsp;&nbsp;&nbsp;
+					<input type="button" id="torna" name="torna" value="INDIETRO" onClick="window.location.href ='listaSpesa.php'"> &nbsp;&nbsp;&nbsp;
 					<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'"> </br></br>
 				</div>
 			</div>

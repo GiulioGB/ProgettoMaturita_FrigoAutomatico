@@ -36,7 +36,7 @@
 							
 							<form action="spesa.php" method="POST">
 								<h3>Lista della spesa </h3> <br/>
-								<p> Inserisci il nome dell'utente: &nbsp;&nbsp;&nbsp; <input type="text" name="utente"> </p> <br/>
+								<p> Inserisci il nome dell'utente: &nbsp;&nbsp;&nbsp; <input type="text" name="utente" required> </p> <br/>
 								<input type="submit" name="bRicerca" id="bRicerca" value="Ricerca"> &nbsp;&nbsp;&nbsp; 
 								<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 							</form>
