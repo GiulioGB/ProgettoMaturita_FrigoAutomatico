@@ -141,6 +141,24 @@ namespace Frigo
             ChiudiConnessione();
         }
     
+		//Riempi Combo
+        public void riempi(ComboBox prima,string nomeFrigo)
+        {
+            
+
+            string query = "SELECT Nome FROM familiare WHERE IDFrigo = "+selectID(nomeFrigo)+"";
+            ApriConnessione();
+            mcd = new MySqlCommand(query, mcon);
+            mdr = mcd.ExecuteReader();
+
+            while(mdr.Read())
+            {
+                prima.Items.Add(mdr["Nome"].ToString());
+            }
+
+            ChiudiConnessione();
+        }
+		
         //Verifica presenza utente da eliminare nell' elenco degli utenti di quel frigo
         public bool verifica(int id, string daEliminare)
         {
@@ -177,6 +195,16 @@ namespace Frigo
         public void Salva(string nomeFrigo, TextBox prima, TextBox seconda, ComboBox terza, TextBox quarta, TextBox quinta, TextBox sesta)
         {
             string q = "INSERT INTO familiare (Nome,Cognome,Sesso,Peso,Altezza,Eta,IDFrigo) values('" + prima.Text + "','" + seconda.Text + "','" + terza.SelectedItem.ToString() + "'," + Int32.Parse(quarta.Text) + "," + Int32.Parse(quinta.Text) + "," + Int32.Parse(sesta.Text) + "," + selectID(nomeFrigo) + ");";
+
+            ExecuteQuery(q);
+
+            ChiudiConnessione();
+        }
+		
+		//Aggiorna Utente
+        public void Aggiorna(string nomeFrigo,ComboBox prima, ComboBox seconda, TextBox quarta, TextBox quinta, TextBox sesta)
+        {
+            string q = "UPDATE familiare SET Sesso ='" + seconda.SelectedItem.ToString() + "',Peso = " + Int32.Parse(quarta.Text) + ",Altezza = " + Int32.Parse(quinta.Text) + ", Eta = " + Int32.Parse(sesta.Text) + ", IDFrigo = " + selectID(nomeFrigo) + " WHERE Nome = '" + prima.SelectedItem.ToString() + "' AND IDFrigo = " + selectID(nomeFrigo) + ";";
 
             ExecuteQuery(q);
 
