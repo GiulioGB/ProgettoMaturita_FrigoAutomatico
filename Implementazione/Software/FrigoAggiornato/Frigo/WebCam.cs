@@ -120,6 +120,7 @@ namespace Frigo
                 barCode = code;
                 codiceLetto.Text = code;
                 Console.Beep();
+                
                 //newBarCode(this, e);
                 //string q = "INSERT INTO prodotto (EAN,NomeAlimento,dataScadenza,luogoProduzione,Quantita,IDFrigo) values('" + token[0] + "','" + token[1] + "','" + token[2]+ "','" + token[3] + "','"+1+"','"+conn.selectID(nomeFrigo)+"');";
                 //conn.ExecuteQuery(q);
