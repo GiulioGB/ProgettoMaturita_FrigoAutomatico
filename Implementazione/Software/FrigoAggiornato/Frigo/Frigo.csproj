@@ -131,6 +131,12 @@
     <Compile Include="Registrazione.designer.cs">
       <DependentUpon>Registrazione.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ricette.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ricette.Designer.cs">
+      <DependentUpon>Ricette.cs</DependentUpon>
+    </Compile>
     <Compile Include="utente.cs" />
     <Compile Include="WebCam.cs">
       <SubType>UserControl</SubType>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registrazione.resx">
       <DependentUpon>Registrazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ricette.resx">
+      <DependentUpon>Ricette.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WebCam.resx">
       <DependentUpon>WebCam.cs</DependentUpon>

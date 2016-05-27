@@ -131,6 +131,7 @@
             this.Ricette.Size = new System.Drawing.Size(300, 300);
             this.Ricette.TabIndex = 5;
             this.Ricette.UseVisualStyleBackColor = true;
+            this.Ricette.Click += new System.EventHandler(this.Ricette_Click);
             // 
             // Aggiungi
             // 

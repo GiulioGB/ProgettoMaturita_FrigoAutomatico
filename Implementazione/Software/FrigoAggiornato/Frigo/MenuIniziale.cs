@@ -64,5 +64,13 @@ namespace Frigo
             inv.BringToFront();
             this.Refresh();
         }
+
+        private void Ricette_Click(object sender, EventArgs e)
+        {
+            Ricette ric = new Ricette();
+            Controls.Add(ric);
+            ric.BringToFront();
+            this.Refresh();
+        }
     }
 }
