@@ -74,6 +74,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AggiornaFamiliare.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AggiornaFamiliare.Designer.cs">
+      <DependentUpon>AggiornaFamiliare.cs</DependentUpon>
+    </Compile>
     <Compile Include="AggiungiFamiliare.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
       <DependentUpon>WebCamEl.cs</DependentUpon>
     </Compile>
     <Compile Include="XZingDecode.cs" />
+    <EmbeddedResource Include="AggiornaFamiliare.resx">
+      <DependentUpon>AggiornaFamiliare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggiungiFamiliare.resx">
       <DependentUpon>AggiungiFamiliare.cs</DependentUpon>
     </EmbeddedResource>
