@@ -530,7 +530,7 @@ namespace Frigo
         public void VisualizzaTutto(int id,DataGridView x)
         {
             ApriConnessione();
-            string s = "SELECT Nome, Barcode, dataScadenza FROM prodotto WHERE IDFrigo = "+id+"";
+            string s = "SELECT NomeAlimento, luogoProduzione, dataScadenza,Quantita FROM prodotto WHERE IDFrigo = "+id+"";
             
 
             mcd = new MySqlCommand(s, mcon);
@@ -540,15 +540,8 @@ namespace Frigo
             x.Rows.Clear();
             while (mdr.Read())
             {
-                y = mdr["dataScadenza"].ToString();
-                y = y.Substring(0, 10);
                 x.DefaultCellStyle.Font = new Font("Arial", 16F, GraphicsUnit.Pixel);
-                x.Rows.Add(mdr["Nome"].ToString(), y, mdr["Barcode"].ToString());
-                //x.Rows.Add(mdr["Nome"].ToString(),mdr["dataScdenza"].ToString(),mdr["Barcode"].ToString());
-                /*x.Text += "Nome prodotto "+mdr["Nome"].ToString()+" ";
-                x.Text += "Barcode "+mdr["Barcode"].ToString()+" ";
-                
-                x.Text += "Data di scadenza " + y + "\r\n";*/
+                x.Rows.Add(mdr["NomeAlimento"].ToString(), mdr["luogoProduzione"].ToString(), mdr["dataScadenza"].ToString(),mdr["Quantita"].ToString());
             }
            ChiudiConnessione();
         }

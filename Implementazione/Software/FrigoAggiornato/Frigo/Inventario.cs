@@ -69,5 +69,10 @@ namespace Frigo
             // .PerformClick();
             button2.PerformClick();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
