@@ -27,18 +27,26 @@
 					<div class="section-title text-center">
 						<h3>Di cosa si tratta?</h3>
 						
-						<h4>Premessa</h4>
-						Questo sito nasce come "supporto" al nostro SW raggiungibile al seguente link, e alla nostra applicazione disponibile per ora solo per dispositivi Android raggiungibile tramite quest' altro link
+						<h4>__________ PREMESSA __________</h4>
+						Questo sito nasce come "supporto" alla nostra applicazione Desktop raggiungibile tramite il seguente LINK.
 						<h4>Cosa si puo' fare grazie a questo sito ?</h4>
-						Funzioni semplici, ma che possono davero semplificare il modo con cui si e' soliti "interagire" con frigo e dispensa di cui tutte le cucine sono provviste. Dimenticati di fogliettini e penna per segnarti cio' che devi comprare al supermercato, dimentica quella fastidiosa brina che i forma nelle calde giornate d' estate perche' hai aperto il frigo numerose volte per verificarne il contenuto
-						<h4>Elenco funzioni</h4>
-						<b>Visualizza contenuto del frigo: </b><br/>Tramite questa funzione sara' possibile visualizzare l'elenco di tutti gli alimenti contenuti nel frigo con tutti i relativi dettagli (es: nome,data di scadenza ... ).<br/>
-						<b>Visualizza contenuto della dispensa: </b><br/>Tramite questa funzione sara' possibile visualizzare l'elendo di tutti gli alimenti contenuti nella dispensa con tutti i relativi dettagli (es: nome, data di scadenza...).<br/>
-						<b>Ricerca prodotti nella dispensa: </b><br/>Tramite questa funzione sara' possibile ricercare un prodotto per Nome, cosi' da verificarne la presenza o meno all' interno del frigo.<br/>
-						<b>Ricerca prodotti nella dispensa: </b><br/>Tramite questa funzione sara' possibile ricercare un prodotto per Nome, cosi' da verificarna la presenza o meno all' interno della dspensa.<br/>
-						<b>Visualizzazione lista della spesa: </b><br/>"SE" un prodotto dovesse mancare o in frigo o nella dispensa sara' possibile aggiungerlo alla lista della spesa dal SW per poi visualizzarlo mentre si e' al supermercato direttamente online.<br/>
-						<h4>Piccoli accorgimenti</h4>
-						Per garantire il corretto utilizzo delle funzioni, bisognera' prima di tutto effettuare la log-in utilizzando l' apposita sezione.
+						Funzioni semplici, pensate per aiutarti nell'interazione con il frigo in modo facile e veloce.<br/> 
+						Dimentica carta e penna per segnare cio' che manca.<br/>
+						Dimentica quel senso di amarezza nel scoprire che cio' che piu' desideri e' finito.
+						<h4>__________ ELENCO FUNZIONI __________</h4>
+						
+						<b>INVENTARIO: </b><br/>Mostra l'elenco dei prodotti contenuti nel frigo.<br/>
+						
+						<b>RICERCA: </b><br/>Da la possibilita' di verificare tramite una ricerca per nome la presenza o meno di un prodotto nel frigo.<br/>
+												
+						<b>LISTA DELLA SPESA: </b><br/>Mostra l'elenco di tutti quei prodotti che dovranno essere acquistati al piu' presto.<br/>
+						
+						<b>RICETTE: </b><br/>Mostra un elenco di alcuni tra i piu' famosi siti di cucina.<br/>
+						
+						<b>FAMILIARI: </b><br/>Mostra l'elenco dei tutti i familiari registrati sul frigo.<br/>
+						
+						<h4>__________ PICCOLI ACCORGIMENTI __________</h4>
+						Le funzioni sopra indicate sono considerate funzioni riservate, dovra' essere eseguita una Log-In per poterle utilizzare.
 						</br>
 						</br>
 						<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
