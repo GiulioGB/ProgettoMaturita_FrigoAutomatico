@@ -137,6 +137,12 @@
     <Compile Include="Registrazione.designer.cs">
       <DependentUpon>Registrazione.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ricerca.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ricerca.Designer.cs">
+      <DependentUpon>Ricerca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ricette.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registrazione.resx">
       <DependentUpon>Registrazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ricerca.resx">
+      <DependentUpon>Ricerca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ricette.resx">
       <DependentUpon>Ricette.cs</DependentUpon>
@@ -249,6 +258,7 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Resources\background1.jpg" />
+    <None Include="Resources\Impostazioni.bmp" />
     <Content Include="Resources\Preferiti.bmp" />
     <None Include="Resources\pulsante_spese2.bmp" />
     <None Include="Resources\pulsante_spesa.bmp" />

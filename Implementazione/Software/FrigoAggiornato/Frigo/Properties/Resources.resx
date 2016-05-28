@@ -121,17 +121,14 @@
   <data name="conferma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\conferma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ghiaccio-cubetti" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ghiaccio-cubetti.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pulsante_spese2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pulsante_spese2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Preferiti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Preferiti.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pulsante_spesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pulsante_spesa.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sito.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +151,14 @@
   <data name="pulsante_cerca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pulsante_cerca.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pulsante_spesa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pulsante_spesa.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pulsante_Temperatura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pulsante_Temperatura.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ghiaccio-cubetti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ghiaccio-cubetti.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pulsante_registrazione3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pulsante_registrazione3.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +166,7 @@
   <data name="pulsante_aggiungi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pulsante_aggiungi.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pulsante_Temperatura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pulsante_Temperatura.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Impostazioni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Impostazioni.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

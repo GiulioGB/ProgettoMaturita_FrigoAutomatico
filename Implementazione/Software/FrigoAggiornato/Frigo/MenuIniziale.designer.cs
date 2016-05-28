@@ -104,6 +104,7 @@
             this.Cerca.Size = new System.Drawing.Size(300, 300);
             this.Cerca.TabIndex = 7;
             this.Cerca.UseVisualStyleBackColor = true;
+            this.Cerca.Click += new System.EventHandler(this.Cerca_Click);
             // 
             // Elimina
             // 

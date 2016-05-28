@@ -574,12 +574,7 @@ namespace Frigo
 
             ChiudiConnessione();
 
-            if (s == false)
-            {
-                return false;
-
-            }
-            else return true;
+            return s;
             
         }
 

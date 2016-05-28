@@ -72,5 +72,13 @@ namespace Frigo
             ric.BringToFront();
             this.Refresh();
         }
+
+        private void Cerca_Click(object sender, EventArgs e)
+        {
+            Ricerca ric = new Ricerca(nomeFrigo);
+            Controls.Add(ric);
+            ric.BringToFront();
+            this.Refresh();
+        }
     }
 }
