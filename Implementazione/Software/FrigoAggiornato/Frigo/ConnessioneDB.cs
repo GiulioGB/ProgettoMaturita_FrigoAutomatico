@@ -550,6 +550,38 @@ namespace Frigo
 
             }
         }
+		
+		
+		
+		public bool ricerca(string nome, int IDFrigo, DataGridView x)
+        {
+            ApriConnessione();
+
+            string query = "SELECT  NomeAlimento ,  dataScadenza , Quantita , luogoProduzione FROM prodotto WHERE NomeAlimento='" + nome + "' AND IDFrigo='" + IDFrigo + "'";
+            mcd = new MySqlCommand(query, mcon);
+            mdr = mcd.ExecuteReader();
+            bool s = false;
+
+            x.Rows.Clear();
+            
+                while (mdr.Read())
+                {
+                    x.DefaultCellStyle.Font = new Font("Arial", 16F, GraphicsUnit.Pixel);
+                    x.Rows.Add(mdr["NomeAlimento"].ToString(), mdr["dataScadenza"].ToString(), mdr["Quantita"].ToString(), mdr["luogoProduzione"].ToString());
+                    s = true;
+                }
+
+
+            ChiudiConnessione();
+
+            if (s == false)
+            {
+                return false;
+
+            }
+            else return true;
+            
+        }
 
         //---
         //-FINE GESTIONE PRODOTTI
