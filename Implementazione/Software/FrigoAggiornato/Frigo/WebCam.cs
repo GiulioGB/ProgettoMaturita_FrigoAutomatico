@@ -104,7 +104,7 @@ namespace Frigo
 
         private void agg_Click(object sender, EventArgs e)
         {
-            Prodotto prod;
+            //Prodotto prod;
             
             string code = XZingDecode.decode(cam.Image);
 

@@ -91,7 +91,7 @@ namespace Frigo
 
         private void agg_Click(object sender, EventArgs e)
         {
-            Prodotto prod;
+            //Prodotto prod;
 
             string code = XZingDecode.decode(cam.Image);
 
@@ -126,7 +126,7 @@ namespace Frigo
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Interval = 1000;
+            timer1.Interval = 3000;
             agg.PerformClick(); 
         }
 
