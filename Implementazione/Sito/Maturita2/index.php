@@ -125,7 +125,7 @@
 						<?php 
 							if(isset($_SESSION["CodiceFrigo"]))
 							{
-								echo "<a href='listaSpesa.php'>";
+								echo "<a href='spesa.php'>";
 								echo "<i class='fa fa-shopping-cart'></i>";
 								echo "<p>";
 								echo "Lista della spesa";
