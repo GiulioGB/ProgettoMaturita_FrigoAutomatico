@@ -20,8 +20,8 @@ namespace Frigo
         {
             nomeFrigo = nome;
             InitializeComponent();
-            timer1.Interval = 3000;
-            timer1.Start();
+          /*  timer1.Interval = 3000;
+            timer1.Start();*/
         }
        
         private void Inventario_Load(object sender, EventArgs e)
@@ -34,8 +34,8 @@ namespace Frigo
             //clicco in modo automatico il bottone
             //button2.PerformClick();
             //avvio il timer
-            timer1.Interval = 1000;
-            timer1.Start();
+           // timer1.Interval = 1000;
+            //timer1.Start();
         }
         /*private void timer1_Tick_1(object sender, EventArgs e)
         {
@@ -65,9 +65,9 @@ namespace Frigo
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Interval = 1000;
+           // timer1.Interval = 1000;
             // .PerformClick();
-            button2.PerformClick();
+           // button2.PerformClick();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
