@@ -19,6 +19,7 @@ namespace Frigo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            webBrowser1.Navigate(new Uri("http://www.google.it/"));
             this.Visible = false;
         }
 
