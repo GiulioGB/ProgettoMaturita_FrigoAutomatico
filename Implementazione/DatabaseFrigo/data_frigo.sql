@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mag 27, 2016 alle 08:24
+-- Generation Time: Giu 01, 2016 alle 09:58
 -- Versione del server: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -125,6 +125,19 @@ CREATE TABLE IF NOT EXISTS `frigo` (
 INSERT INTO `frigo` (`ID`, `Username`, `Password`) VALUES
 (1, 'Frigo1', 'c7cc6a1fd6d6b5f4817025cb532b52fa'),
 (2, 'Frigo2', 'f2293aa6431ff49aa481e7acaea71116');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `listaspesa`
+--
+
+CREATE TABLE IF NOT EXISTS `listaspesa` (
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  `nomeAlimento` varchar(30) NOT NULL,
+  `quantita` int(5) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
