@@ -63,7 +63,7 @@
             this.Indietro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Indietro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Indietro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Indietro.Font = new System.Drawing.Font("Cambria", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Indietro.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Indietro.Location = new System.Drawing.Point(23, 74);
             this.Indietro.Name = "Indietro";
             this.Indietro.Size = new System.Drawing.Size(241, 606);
@@ -175,7 +175,7 @@
             this.AGGIORNA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.AGGIORNA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.AGGIORNA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AGGIORNA.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AGGIORNA.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AGGIORNA.Location = new System.Drawing.Point(1101, 74);
             this.AGGIORNA.Name = "AGGIORNA";
             this.AGGIORNA.Size = new System.Drawing.Size(241, 606);

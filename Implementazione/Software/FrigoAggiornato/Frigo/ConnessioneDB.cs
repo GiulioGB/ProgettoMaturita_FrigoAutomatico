@@ -419,7 +419,7 @@ namespace Frigo
             {
                 int quantita = Int32.Parse(mdr["Quantita"].ToString());
 
-                if(quantita != 1)
+                if(quantita > 1)
                 {
                     string q = mdr["Quantita"].ToString();
                     int nuovaQ = Int32.Parse(q);
@@ -432,14 +432,18 @@ namespace Frigo
                     ExecuteQuery(update);
                     
                 }
-                else
+                else if(quantita == 1)
                 {
                     ChiudiConnessione();
 
                     string query = "DELETE FROM prodotto WHERE NomeAlimento = '"+nome+"' AND IDFrigo = '"+IDFrigo+"'";
                     ExecuteQuery(query);
                 }
-
+                else
+                {
+                    ChiudiConnessione();
+                    MessageBox.Show("Questo prodotto non è contenuto nel frigo, impossibile eliminarlo");
+                }
 
             }
         }
@@ -521,9 +525,11 @@ namespace Frigo
         }
 
         //Aggiorna se presente diminuendo la quantita
-        public void aggiornaNeg(string EAN, string Nome, string scadenza, string produzione, string IDFrigo)
+        public bool aggiornaNeg(string EAN, string Nome, string scadenza, string produzione, string IDFrigo)
         {
             ApriConnessione();
+
+            bool controlla = true;
 
             string query = "SELECT dataScadenza,Quantita FROM prodotto WHERE NomeAlimento='" + Nome + "' AND IDFrigo='" + IDFrigo + "'";
             mcd = new MySqlCommand(query, mcon);
@@ -540,14 +546,23 @@ namespace Frigo
 
                     string query3 = "UPDATE prodotto SET Quantita = " + quantita + " WHERE dataScadenza ='" + scadenza + "' AND NomeAlimento = '" + Nome + "' AND IDFrigo = '"+IDFrigo+"'";
                     ExecuteQuery(query3);
+                    return controlla;
                 }
                 else
                 {
                     ChiudiConnessione();
                     string query4 = "DELETE FROM prodotto WHERE  dataScadenza ='" + scadenza + "' AND NomeAlimento = '" + Nome + "' AND IDFrigo = '" + IDFrigo + "'";
                     ExecuteQuery(query4);
+                    return controlla;
                 }
 
+            }
+            else
+            {
+                ChiudiConnessione();
+                MessageBox.Show("Il prodotto non è presente nel frigo, impossibile eliminarlo");
+                controlla = false;
+                return controlla;
             }
         }
 		

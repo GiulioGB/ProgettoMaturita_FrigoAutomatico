@@ -118,7 +118,7 @@ namespace Frigo
                                 
                 //prod = new Prodotto(token[1], token[0], token[2]);
                 barCode = code;
-                codiceLetto.Text = code;
+                codiceLetto.Text = token[1];
                 Console.Beep();
                 
                 //newBarCode(this, e);

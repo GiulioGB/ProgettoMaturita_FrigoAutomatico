@@ -102,11 +102,20 @@ namespace Frigo
             if (code != "" )
             {
                 //prod = new Prodotto(token[1], token[0], token[2]);
-                conn.aggiornaNeg(token[0], token[1], token[2], token[3], conn.selectID(nomeFrigo).ToString());
+                bool verifica = conn.aggiornaNeg(token[0], token[1], token[2], token[3], conn.selectID(nomeFrigo).ToString());
 
-                barCode = code;
-                codiceLetto.Text = code;
-                Console.Beep();
+                if(verifica == true)
+                {
+                    //barCode = code;
+                    codiceLetto.Text = token[1];
+                    Console.Beep();
+                }
+                else
+                {
+                    codiceLetto.Text = "not Found";
+                }
+
+
                 //newBarCode(this, e);
                 //string q = "DELETE FROM prodotto WHERE Barcode ='"+prod.getCodice()+"'";
                 //conn.ExecuteQuery(q);

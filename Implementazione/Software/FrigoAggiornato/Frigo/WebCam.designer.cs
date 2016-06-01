@@ -95,7 +95,7 @@
             this.daAggiungere.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daAggiungere.Location = new System.Drawing.Point(412, 587);
             this.daAggiungere.Name = "daAggiungere";
-            this.daAggiungere.Size = new System.Drawing.Size(541, 42);
+            this.daAggiungere.Size = new System.Drawing.Size(541, 41);
             this.daAggiungere.TabIndex = 7;
             // 
             // timer1
@@ -142,14 +142,14 @@
             // 
             // Menu
             // 
-            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Menu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Menu.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Menu.FlatAppearance.BorderSize = 3;
-            this.Menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Ivory;
+            this.Menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Menu.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Menu.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu.ForeColor = System.Drawing.Color.Black;
             this.Menu.Location = new System.Drawing.Point(971, 159);
             this.Menu.Name = "Menu";
@@ -161,17 +161,17 @@
             // 
             // aggiungi
             // 
-            this.aggiungi.BackColor = System.Drawing.Color.Red;
+            this.aggiungi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.aggiungi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.aggiungi.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.aggiungi.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.aggiungi.FlatAppearance.BorderSize = 3;
-            this.aggiungi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.aggiungi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.aggiungi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Ivory;
+            this.aggiungi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.aggiungi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aggiungi.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aggiungi.Location = new System.Drawing.Point(493, 634);
+            this.aggiungi.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aggiungi.Location = new System.Drawing.Point(353, 634);
             this.aggiungi.Name = "aggiungi";
-            this.aggiungi.Size = new System.Drawing.Size(378, 41);
+            this.aggiungi.Size = new System.Drawing.Size(647, 64);
             this.aggiungi.TabIndex = 13;
             this.aggiungi.Text = "AGGIUNGI MANUALMENTE";
             this.aggiungi.UseVisualStyleBackColor = false;
@@ -180,10 +180,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(376, 548);
+            this.label1.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(93, 537);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(622, 25);
+            this.label1.Size = new System.Drawing.Size(1175, 47);
             this.label1.TabIndex = 10;
             this.label1.Text = "Indicare il nome del prodotto in caso di NON PRESENZA del QrCode";
             // 
@@ -205,7 +205,7 @@
             this.codiceLetto.Location = new System.Drawing.Point(19, 317);
             this.codiceLetto.Name = "codiceLetto";
             this.codiceLetto.ReadOnly = true;
-            this.codiceLetto.Size = new System.Drawing.Size(378, 42);
+            this.codiceLetto.Size = new System.Drawing.Size(378, 41);
             this.codiceLetto.TabIndex = 14;
             // 
             // label3

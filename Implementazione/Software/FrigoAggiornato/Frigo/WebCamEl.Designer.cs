@@ -64,12 +64,12 @@
             // 
             this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.Menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Menu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.Menu.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
             this.Menu.FlatAppearance.BorderSize = 3;
             this.Menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Menu.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Menu.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu.ForeColor = System.Drawing.Color.Black;
             this.Menu.Location = new System.Drawing.Point(970, 159);
             this.Menu.Name = "Menu";
@@ -82,10 +82,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(370, 543);
+            this.label1.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(94, 534);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(622, 25);
+            this.label1.Size = new System.Drawing.Size(1175, 47);
             this.label1.TabIndex = 18;
             this.label1.Text = "Indicare il nome del prodotto in caso di NON PRESENZA del QrCode";
             // 
@@ -118,9 +118,9 @@
             // daEliminare
             // 
             this.daEliminare.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daEliminare.Location = new System.Drawing.Point(413, 580);
+            this.daEliminare.Location = new System.Drawing.Point(413, 584);
             this.daEliminare.Name = "daEliminare";
-            this.daEliminare.Size = new System.Drawing.Size(541, 42);
+            this.daEliminare.Size = new System.Drawing.Size(541, 41);
             this.daEliminare.TabIndex = 15;
             // 
             // cam
@@ -184,17 +184,17 @@
             // 
             // elimina
             // 
-            this.elimina.BackColor = System.Drawing.Color.Navy;
+            this.elimina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.elimina.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.elimina.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.elimina.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
             this.elimina.FlatAppearance.BorderSize = 3;
-            this.elimina.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.elimina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.elimina.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.elimina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.elimina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.elimina.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.elimina.Location = new System.Drawing.Point(490, 627);
+            this.elimina.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elimina.Location = new System.Drawing.Point(391, 630);
             this.elimina.Name = "elimina";
-            this.elimina.Size = new System.Drawing.Size(378, 41);
+            this.elimina.Size = new System.Drawing.Size(594, 64);
             this.elimina.TabIndex = 23;
             this.elimina.Text = "ELIMINA MANUALMENTE";
             this.elimina.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@
             this.codiceLetto.Location = new System.Drawing.Point(19, 317);
             this.codiceLetto.Name = "codiceLetto";
             this.codiceLetto.ReadOnly = true;
-            this.codiceLetto.Size = new System.Drawing.Size(378, 42);
+            this.codiceLetto.Size = new System.Drawing.Size(378, 41);
             this.codiceLetto.TabIndex = 24;
             // 
             // label3
