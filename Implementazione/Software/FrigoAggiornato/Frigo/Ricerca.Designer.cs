@@ -37,6 +37,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,53 +45,53 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(491, 167);
+            this.label1.Location = new System.Drawing.Point(488, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(416, 34);
+            this.label1.Size = new System.Drawing.Size(398, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Inserisci il prodotto da eliminare";
+            this.label1.Text = "Inserisci il prodotto da cercare:";
             // 
             // nomeCercato
             // 
             this.nomeCercato.Font = new System.Drawing.Font("Cambria", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeCercato.Location = new System.Drawing.Point(357, 241);
+            this.nomeCercato.Location = new System.Drawing.Point(348, 293);
             this.nomeCercato.Name = "nomeCercato";
             this.nomeCercato.Size = new System.Drawing.Size(696, 41);
             this.nomeCercato.TabIndex = 2;
             // 
             // bMenu
             // 
-            this.bMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bMenu.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.bMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bMenu.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.bMenu.FlatAppearance.BorderSize = 3;
             this.bMenu.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.bMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.bMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.bMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bMenu.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bMenu.Location = new System.Drawing.Point(357, 350);
+            this.bMenu.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold);
+            this.bMenu.Location = new System.Drawing.Point(348, 584);
             this.bMenu.Name = "bMenu";
-            this.bMenu.Size = new System.Drawing.Size(326, 107);
+            this.bMenu.Size = new System.Drawing.Size(696, 92);
             this.bMenu.TabIndex = 5;
-            this.bMenu.Text = "Menù";
+            this.bMenu.Text = "MENU\'";
             this.bMenu.UseVisualStyleBackColor = false;
             this.bMenu.Click += new System.EventHandler(this.bMenu_Click);
             // 
             // bRicerca
             // 
-            this.bRicerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.bRicerca.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.bRicerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bRicerca.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.bRicerca.FlatAppearance.BorderSize = 3;
             this.bRicerca.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.bRicerca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.bRicerca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.bRicerca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bRicerca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.bRicerca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bRicerca.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bRicerca.Location = new System.Drawing.Point(724, 350);
+            this.bRicerca.Location = new System.Drawing.Point(348, 445);
             this.bRicerca.Name = "bRicerca";
-            this.bRicerca.Size = new System.Drawing.Size(329, 107);
+            this.bRicerca.Size = new System.Drawing.Size(696, 92);
             this.bRicerca.TabIndex = 4;
-            this.bRicerca.Text = "Ricerca";
+            this.bRicerca.Text = "RICERCA";
             this.bRicerca.UseVisualStyleBackColor = false;
             this.bRicerca.Click += new System.EventHandler(this.bRicerca_Click);
             // 
@@ -138,10 +139,24 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 300;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Chartreuse;
+            this.label2.Font = new System.Drawing.Font("Cambria", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Green;
+            this.label2.Location = new System.Drawing.Point(547, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(290, 75);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "RICERCA";
+            // 
             // Ricerca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Chartreuse;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.bMenu);
             this.Controls.Add(this.bRicerca);
             this.Controls.Add(this.nomeCercato);
@@ -167,5 +182,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label2;
     }
 }

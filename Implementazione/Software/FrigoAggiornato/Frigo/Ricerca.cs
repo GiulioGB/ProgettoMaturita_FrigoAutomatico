@@ -27,19 +27,24 @@ namespace Frigo
        
         private void bRicerca_Click(object sender, EventArgs e)
         {
-            
-            if (conn.ricerca(nomeCercato.Text, conn.selectID(nomeFrigo), dataGridView1) == true)
+            if(nomeCercato.Text == "")
             {
-                dataGridView1.Visible = true;
-                nomeCercato.Visible = false;
-                bRicerca.Visible = false;
-                label1.Visible = false;
-            }else
-            {
+                MessageBox.Show("Inserisci un prodotto!", "Errore!");
 
-                //messagebox
-
-            }
+            }else if (conn.ricerca(nomeCercato.Text, conn.selectID(nomeFrigo), dataGridView1) == true)
+                {
+                    dataGridView1.Visible = true;
+                    nomeCercato.Visible = false;
+                    bRicerca.Visible = false;
+                    label1.Visible = false;
+                    bRicerca.Visible = false;
+                    bMenu.Size = new Size(1242, 184);
+                    bMenu.Location = new System.Drawing.Point(59, 481);
+                    label2.Visible = false;
+                
+                
+            }else MessageBox.Show("Prodotto non presente nel frigo", "Errore!");
+                
 
         }
 
