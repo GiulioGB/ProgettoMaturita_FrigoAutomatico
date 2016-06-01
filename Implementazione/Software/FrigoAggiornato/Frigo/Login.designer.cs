@@ -41,7 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 17);
+            this.label1.Location = new System.Drawing.Point(650, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(164, 57);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 145);
+            this.label2.Location = new System.Drawing.Point(193, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 32);
             this.label2.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 255);
+            this.label3.Location = new System.Drawing.Point(193, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 32);
             this.label3.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             this.NomeFrigo_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.NomeFrigo_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeFrigo_textBox.Location = new System.Drawing.Point(359, 145);
+            this.NomeFrigo_textBox.Location = new System.Drawing.Point(489, 145);
             this.NomeFrigo_textBox.Name = "NomeFrigo_textBox";
             this.NomeFrigo_textBox.Size = new System.Drawing.Size(685, 38);
             this.NomeFrigo_textBox.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             this.Password_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Password_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_TextBox.Location = new System.Drawing.Point(359, 255);
+            this.Password_TextBox.Location = new System.Drawing.Point(489, 255);
             this.Password_TextBox.Name = "Password_TextBox";
             this.Password_TextBox.PasswordChar = '*';
             this.Password_TextBox.Size = new System.Drawing.Size(685, 38);
@@ -91,9 +91,9 @@
             this.accedi_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.accedi_login.BackColor = System.Drawing.Color.Lime;
             this.accedi_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accedi_login.Location = new System.Drawing.Point(290, 442);
+            this.accedi_login.Location = new System.Drawing.Point(184, 450);
             this.accedi_login.Name = "accedi_login";
-            this.accedi_login.Size = new System.Drawing.Size(250, 250);
+            this.accedi_login.Size = new System.Drawing.Size(491, 250);
             this.accedi_login.TabIndex = 5;
             this.accedi_login.Text = "Accedi";
             this.accedi_login.UseVisualStyleBackColor = false;
@@ -104,9 +104,9 @@
             this.registrazione_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.registrazione_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.registrazione_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrazione_login.Location = new System.Drawing.Point(705, 442);
+            this.registrazione_login.Location = new System.Drawing.Point(681, 450);
             this.registrazione_login.Name = "registrazione_login";
-            this.registrazione_login.Size = new System.Drawing.Size(250, 250);
+            this.registrazione_login.Size = new System.Drawing.Size(491, 250);
             this.registrazione_login.TabIndex = 6;
             this.registrazione_login.Text = "Registrati";
             this.registrazione_login.UseVisualStyleBackColor = false;
