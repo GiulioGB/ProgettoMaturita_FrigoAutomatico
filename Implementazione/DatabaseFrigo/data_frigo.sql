@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Giu 01, 2016 alle 09:58
+-- Generation Time: Giu 03, 2016 alle 08:16
 -- Versione del server: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `alimento` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Nome` varchar(20) NOT NULL,
+  `Nome` varchar(35) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `Nome` (`Nome`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=40 ;
@@ -174,7 +174,7 @@ INSERT INTO `preferito` (`ID`, `IDAlimento`, `IDFamiliare`) VALUES
 CREATE TABLE IF NOT EXISTS `prodotto` (
   `ID` int(5) NOT NULL AUTO_INCREMENT,
   `EAN` varchar(50) DEFAULT NULL,
-  `NomeAlimento` varchar(20) NOT NULL,
+  `NomeAlimento` varchar(35) NOT NULL,
   `dataScadenza` varchar(25) DEFAULT NULL,
   `IDFrigo` int(5) NOT NULL,
   `luogoProduzione` varchar(20) DEFAULT NULL,
