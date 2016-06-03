@@ -41,8 +41,9 @@
 							//seleziono il database da usare
 							mysqli_select_db($link, "data_frigo");
 							
-							
-							
+							//data di oggi
+							$oggi = strtotime(date('Y-m-d'));
+							echo $oggi;
 							//imposto la query
 							$result = mysqli_query($link, "SELECT NomeAlimento, dataScadenza , EAN , luogoProduzione , Quantita FROM prodotto WHERE IDFrigo = ( SELECT ID 
 																													 FROM frigo
@@ -52,7 +53,23 @@
 							echo "<table align='center' >";
 							echo "<tr><th>&nbsp;&nbsp; EAN &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Nome &nbsp;&nbsp; </th><th> &nbsp;&nbsp; Data scadenza &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Luogo produzione &nbsp;&nbsp;</th><th> &nbsp;&nbsp; Quantita' &nbsp;&nbsp;</th></tr>";
 							while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
-								echo "<tr><td align='center'>".$row["EAN"]."</td><td align='center'>".$row["NomeAlimento"]."</td><td align='center'>".$row["dataScadenza"]."</td><td align='center'>".$row["luogoProduzione"]."</td><td align='center'>".$row["Quantita"]."</td></tr>";
+								
+								$dataCibo = strtotime($row['dataScadenza']);
+								
+								//echo $dataCibo;
+								if($dataCibo < $oggi)
+								{
+									echo "<tr bgcolor = 'red' ><td align='center'>".$row["EAN"]."</td><td align='center'>".$row["NomeAlimento"]."</td><td align='center'>"."PRODOTTO SCADUTO"."</td><td align='center'>".$row["luogoProduzione"]."</td><td align='center'>".$row["Quantita"]."</td></tr>";
+								}
+								else if($dataCibo == $oggi)
+								{
+									echo "<tr bgcolor = 'yellow' ><td align='center'>".$row["EAN"]."</td><td align='center'>".$row["NomeAlimento"]."</td><td align='center'>"."SCADE OGGI"."</td><td align='center'>".$row["luogoProduzione"]."</td><td align='center'>".$row["Quantita"]."</td></tr>";
+								}
+								else
+								{
+									echo "<tr><td align='center'>".$row["EAN"]."</td><td align='center'>".$row["NomeAlimento"]."</td><td align='center'>".$row["dataScadenza"]."</td><td align='center'>".$row["luogoProduzione"]."</td><td align='center'>".$row["Quantita"]."</td></tr>";
+								}
+								
 							}
 							echo "</table>";
 							echo "</br></br>";
