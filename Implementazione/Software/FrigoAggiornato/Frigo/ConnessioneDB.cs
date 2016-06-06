@@ -608,17 +608,29 @@ namespace Frigo
             int i=0;
             x.Rows.Clear();
 
-            System.DateTime q;
-            q = System.DateTime.Today;
-            int day = q.Day;
-            int month = q.Month;
-            int year = q.Year;
+            System.DateTime today;
+            today = System.DateTime.Today; // data di oggi
             while (mdr.Read())
             {
-
                 string date = mdr["dataScadenza"].ToString();
-                x.DefaultCellStyle.Font = new Font("Arial", 16F, GraphicsUnit.Pixel);
-                x.Rows.Add(mdr["NomeAlimento"].ToString(), mdr["luogoProduzione"].ToString(), mdr["dataScadenza"].ToString(),mdr["Quantita"].ToString());
+                DateTime pdate = Convert.ToDateTime(date); //data del prodotto
+                if (pdate < today)
+                {
+                    x.DefaultCellStyle.Font = new Font("Arial", 16F, GraphicsUnit.Pixel);
+                    x.Rows.Add(mdr["NomeAlimento"].ToString(), mdr["luogoProduzione"].ToString(), mdr["dataScadenza"].ToString(), mdr["Quantita"].ToString());
+                }
+                else if (pdate==today)
+                {
+                    x.DefaultCellStyle.Font = new Font("Elephant", 16F, GraphicsUnit.Pixel);
+                    x.Rows.Add(mdr["NomeAlimento"].ToString(), mdr["luogoProduzione"].ToString(), "SCADE OGGI", mdr["Quantita"].ToString());
+       
+                }
+                else
+                {
+                    x.DefaultCellStyle.Font = new Font("Elephant", 16F, GraphicsUnit.Pixel);
+                    x.Rows.Add(mdr["NomeAlimento"].ToString(), mdr["luogoProduzione"].ToString(), "SCADUTO", mdr["Quantita"].ToString());
+
+                }
             }
            ChiudiConnessione();
         }
