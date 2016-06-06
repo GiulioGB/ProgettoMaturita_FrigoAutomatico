@@ -576,7 +576,6 @@ namespace Frigo
             mcd = new MySqlCommand(query, mcon);
             mdr = mcd.ExecuteReader();
             bool s = false;
-
             x.Rows.Clear();
             
                 while (mdr.Read())
@@ -608,8 +607,16 @@ namespace Frigo
             string y;
             int i=0;
             x.Rows.Clear();
+
+            System.DateTime q;
+            q = System.DateTime.Today;
+            int day = q.Day;
+            int month = q.Month;
+            int year = q.Year;
             while (mdr.Read())
             {
+
+                string date = mdr["dataScadenza"].ToString();
                 x.DefaultCellStyle.Font = new Font("Arial", 16F, GraphicsUnit.Pixel);
                 x.Rows.Add(mdr["NomeAlimento"].ToString(), mdr["luogoProduzione"].ToString(), mdr["dataScadenza"].ToString(),mdr["Quantita"].ToString());
             }
