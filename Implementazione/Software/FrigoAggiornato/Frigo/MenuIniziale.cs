@@ -80,5 +80,13 @@ namespace Frigo
             ric.BringToFront();
             this.Refresh();
         }
+
+        private void Preferiti_Click(object sender, EventArgs e)
+        {
+            Preferiti pref = new Preferiti();
+            Controls.Add(pref);
+            pref.BringToFront();
+            this.Refresh();
+        }
     }
 }

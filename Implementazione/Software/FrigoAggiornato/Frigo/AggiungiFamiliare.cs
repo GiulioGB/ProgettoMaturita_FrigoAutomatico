@@ -80,10 +80,18 @@ namespace Frigo
 
         private void Menu_Click(object sender, EventArgs e)
         {
-            MenuIniziale quintaSchermata = new MenuIniziale(FrigoScelto);
-            Controls.Add(quintaSchermata);
-            quintaSchermata.BringToFront();
-            this.Refresh();
+           if(AggiungiUtente1.Text == "")
+           {
+               MessageBox.Show("Inserire almeno un familiare", "ATTENZIONE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           }
+           else
+           {
+               MenuIniziale quintaSchermata = new MenuIniziale(FrigoScelto);
+               Controls.Add(quintaSchermata);
+               quintaSchermata.BringToFront();
+               this.Refresh();
+           }
+            
         }
 
         private void AggiungiUtente1_Click(object sender, EventArgs e)

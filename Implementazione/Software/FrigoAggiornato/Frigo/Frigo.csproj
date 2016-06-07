@@ -129,6 +129,12 @@
     <Compile Include="MenuIniziale2.Designer.cs">
       <DependentUpon>MenuIniziale2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preferiti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Preferiti.Designer.cs">
+      <DependentUpon>Preferiti.cs</DependentUpon>
+    </Compile>
     <Compile Include="prodotto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Registrazione.cs">
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuIniziale2.resx">
       <DependentUpon>MenuIniziale2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferiti.resx">
+      <DependentUpon>Preferiti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -66,6 +66,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(150)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.button1);
             this.Controls.Add(this.webBrowser1);
+            this.MinimumSize = new System.Drawing.Size(1366, 749);
             this.Name = "Ricette";
             this.Size = new System.Drawing.Size(1366, 749);
             this.ResumeLayout(false);

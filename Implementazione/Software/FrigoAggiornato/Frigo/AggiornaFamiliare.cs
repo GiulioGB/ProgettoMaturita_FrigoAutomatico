@@ -50,7 +50,7 @@ namespace Frigo
             //controllo che siano stati compilati i campi
             if (comboBox1.SelectedIndex < 0|| comboBox2.SelectedIndex < 0 || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "")
             {
-                MessageBox.Show("Compila tutti i campi prima di confermare ! ");
+                MessageBox.Show("Compila tutti i campi prima di confermare ! ", "ATTENZIONE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -71,7 +71,7 @@ namespace Frigo
                 }
                 else
                 {
-                    MessageBox.Show("ERRORI NELLA COMPILAZIONE! suggerimenti: controlla di aver inserito nel modo corretto i dati richiesti. Attenzione non sono accettati i numeri con a virgola, qualora ci fossero approssimare il valore per difetto");
+                    MessageBox.Show("ERRORI NELLA COMPILAZIONE! suggerimenti: controlla di aver inserito nel modo corretto i dati richiesti. Attenzione non sono accettati i numeri con a virgola, qualora ci fossero approssimare il valore per difetto","ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

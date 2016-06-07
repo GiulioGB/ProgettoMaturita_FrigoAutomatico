@@ -187,7 +187,7 @@ namespace Frigo
 
             if(sentinella == false)
             {
-                MessageBox.Show("Non è stato trovato nessun familiare con il nome indicato, controlla di aver scritto correttamente!");
+                MessageBox.Show("Non è stato trovato nessun familiare con il nome indicato, controlla di aver scritto correttamente!", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return sentinella;
@@ -356,14 +356,14 @@ namespace Frigo
                 }
                 else
                 {
-                    MessageBox.Show("Le password non corrispondono o sono presenti campi vuoti ");
+                    MessageBox.Show("Le password non corrispondono o sono presenti campi vuoti ", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("Il frigo esiste già");
+                MessageBox.Show("Il frigo esiste già", "ATTENZIONE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
         }
@@ -444,7 +444,7 @@ namespace Frigo
                 else
                 {
                     ChiudiConnessione();
-                    MessageBox.Show("Questo prodotto non è contenuto nel frigo, impossibile eliminarlo");
+                    MessageBox.Show("Questo prodotto non è contenuto nel frigo, impossibile eliminarlo", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -533,36 +533,44 @@ namespace Frigo
 
             bool controlla = true;
 
-            string query = "SELECT dataScadenza,Quantita FROM prodotto WHERE NomeAlimento='" + Nome + "' AND IDFrigo='" + IDFrigo + "'";
+            string query = "SELECT dataScadenza,Quantita FROM prodotto WHERE dataScadenza = '"+scadenza+"' AND NomeAlimento='" + Nome + "' AND IDFrigo='" + IDFrigo + "'";
             mcd = new MySqlCommand(query, mcon);
             mdr = mcd.ExecuteReader();
             if (mdr.Read())
             {
-                int quantita = Int32.Parse(mdr["Quantita"].ToString());
-                
-                if (quantita != 1)
+                string daPassare = mdr["dataScadenza"].ToString();
+               
+
+                if (daPassare == scadenza)
                 {
-                    quantita--;
+                    int quantita = Int32.Parse(mdr["Quantita"].ToString());
 
-                    ChiudiConnessione();
+                    if (quantita != 1)
+                    {
+                        quantita--;
 
-                    string query3 = "UPDATE prodotto SET Quantita = " + quantita + " WHERE dataScadenza ='" + scadenza + "' AND NomeAlimento = '" + Nome + "' AND IDFrigo = '"+IDFrigo+"'";
-                    ExecuteQuery(query3);
-                    return controlla;
+                        ChiudiConnessione();
+
+                        string query3 = "UPDATE prodotto SET Quantita = " + quantita + " WHERE dataScadenza ='" + scadenza + "' AND NomeAlimento = '" + Nome + "' AND IDFrigo = '"+IDFrigo+"'";
+                        ExecuteQuery(query3);
+                        return controlla;
+                    }
+                    else
+                    {
+                        ChiudiConnessione();
+                        string query4 = "DELETE FROM prodotto WHERE  dataScadenza ='" + scadenza + "' AND NomeAlimento = '" + Nome + "' AND IDFrigo = '" + IDFrigo + "'";
+                        ExecuteQuery(query4);
+                        return controlla;
+                    }
                 }
-                else
-                {
-                    ChiudiConnessione();
-                    string query4 = "DELETE FROM prodotto WHERE  dataScadenza ='" + scadenza + "' AND NomeAlimento = '" + Nome + "' AND IDFrigo = '" + IDFrigo + "'";
-                    ExecuteQuery(query4);
-                    return controlla;
-                }
 
+                ChiudiConnessione();
+                return controlla;
             }
             else
             {
                 ChiudiConnessione();
-                MessageBox.Show("Il prodotto non è presente nel frigo, impossibile eliminarlo");
+                MessageBox.Show("Il prodotto non è presente nel frigo, impossibile eliminarlo", "ERRORE", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 controlla = false;
                 return controlla;
             }
@@ -637,7 +645,101 @@ namespace Frigo
            ChiudiConnessione();
         }
 
+        //inserimento utenti nella comboBox
+        public void ComboBoxUtenti(ComboBox cb)//inserisce utenti nella ComboBox
+        {
+            ApriConnessione();
+            string q = "SELECT * FROM familiare";//tutti i nomi degli utenti
+            mcd = new MySqlCommand(q, mcon);
+            mdr = mcd.ExecuteReader();
 
+            while (mdr.Read())//inserimento utenti nella ComboBox
+            {
+                cb.Items.Add(mdr["Nome"]);
+            }
+            cb.SelectedIndex = 0;
+            ChiudiConnessione();
+        }
 
+        //aggiungi preferito
+        public void AggiungiPreferito(string preferito, string utente)//inserisce prodotto tra i preferiti
+        {
+            string IDFamiliare = " ";
+            string IDAlimento = " ";
+            ApriConnessione();
+
+            string q1 = "SELECT ID FROM familiare WHERE Nome ='" + utente + "'";
+
+            mcd = new MySqlCommand(q1, mcon);
+            mdr = mcd.ExecuteReader();
+            while (mdr.Read())//inserimento utenti nella ComboBox
+            {
+                IDFamiliare = mdr["ID"].ToString();
+            }
+            ChiudiConnessione();
+
+            ApriConnessione();
+            string q2 = "SELECT ID FROM alimento WHERE Nome ='" + preferito + "'";
+            mcd = new MySqlCommand(q2, mcon);
+            mdr = mcd.ExecuteReader();
+            while (mdr.Read())//inserimento utenti nella ComboBox
+            {
+                IDAlimento = mdr["ID"].ToString();
+            }
+            ChiudiConnessione();
+
+            string q = "INSERT INTO preferito (IDAlimento, IDFamiliare) values('" + IDAlimento + "','" + IDFamiliare + "')";
+            ExecuteQuery(q);
+        }
+
+        //elimna preferito
+        public void EliminaPreferito(string preferito, string utente)//elimina prodotto dai preferiti
+        {
+            string IDFamiliare = " ";
+            string IDAlimento = " ";
+            ApriConnessione();
+
+            string q1 = "SELECT ID FROM familiare WHERE Nome ='" + utente + "'";
+
+            mcd = new MySqlCommand(q1, mcon);
+            mdr = mcd.ExecuteReader();
+            while (mdr.Read())//inserimento utenti nella ComboBox
+            {
+                IDFamiliare = mdr["ID"].ToString();
+            }
+            ChiudiConnessione();
+
+            ApriConnessione();
+            string q2 = "SELECT ID FROM alimento WHERE Nome ='" + preferito + "'";
+            mcd = new MySqlCommand(q2, mcon);
+            mdr = mcd.ExecuteReader();
+            while (mdr.Read())//inserimento utenti nella ComboBox
+            {
+                IDAlimento = mdr["ID"].ToString();
+            }
+            ChiudiConnessione();
+
+            string q = "DELETE FROM preferito WHERE IDFamiliare = '" + IDFamiliare + "' AND IDAlimento = '" + IDAlimento + "'";
+            ExecuteQuery(q);
+
+        }
+
+        //visualizza preferiti
+        public void VisualizzaPreferiti(TextBox txB, string utente)//visuali tutti i preferiti di un determinato utente
+        {
+            ApriConnessione();
+            string q = "SELECT * FROM (preferito JOIN familiare ON IDFamiliare = ID) JOIN alimento ON IDAlimento=ID WHERE familiare.Nome='" + utente + "'";
+
+            mcd = new MySqlCommand(q, mcon);
+            mdr = mcd.ExecuteReader();
+
+            while (mdr.Read())//inserimento utenti nella ComboBox
+            {
+                txB.Text = mdr["Nome"].ToString();
+            }
+            ChiudiConnessione();
+        }
     }
+
+    
 }

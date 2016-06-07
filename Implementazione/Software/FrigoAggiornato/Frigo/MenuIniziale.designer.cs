@@ -91,6 +91,7 @@
             this.Preferiti.Size = new System.Drawing.Size(300, 300);
             this.Preferiti.TabIndex = 8;
             this.Preferiti.UseVisualStyleBackColor = true;
+            this.Preferiti.Click += new System.EventHandler(this.Preferiti_Click);
             // 
             // Cerca
             // 
@@ -179,7 +180,7 @@
             this.Controls.Add(this.Inventario);
             this.MaximumSize = new System.Drawing.Size(1366, 749);
             this.Name = "MenuIniziale";
-            this.Size = new System.Drawing.Size(1366, 726);
+            this.Size = new System.Drawing.Size(1366, 749);
             this.Load += new System.EventHandler(this.MenuIniziale_Load);
             this.ResumeLayout(false);
 

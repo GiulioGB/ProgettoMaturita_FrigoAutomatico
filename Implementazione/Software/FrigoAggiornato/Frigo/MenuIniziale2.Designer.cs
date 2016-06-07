@@ -180,6 +180,7 @@
             this.Controls.Add(this.Costi);
             this.Controls.Add(this.Temperatura);
             this.Controls.Add(this.Spesa);
+            this.MinimumSize = new System.Drawing.Size(1366, 749);
             this.Name = "MenuIniziale2";
             this.Size = new System.Drawing.Size(1366, 749);
             this.ResumeLayout(false);

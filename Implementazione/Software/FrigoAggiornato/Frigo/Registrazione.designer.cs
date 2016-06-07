@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(580, 23);
+            this.label1.Location = new System.Drawing.Point(511, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(389, 57);
             this.label1.TabIndex = 0;
@@ -110,7 +110,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Aqua;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(199, 406);
             this.button1.Name = "button1";
@@ -122,7 +127,12 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(199, 557);
             this.button2.Name = "button2";
@@ -136,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
@@ -148,7 +158,7 @@
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(1366, 749);
             this.Name = "Registrazione";
-            this.Size = new System.Drawing.Size(1309, 749);
+            this.Size = new System.Drawing.Size(1366, 749);
             this.Load += new System.EventHandler(this.Registrazione_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

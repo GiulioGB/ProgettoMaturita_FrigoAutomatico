@@ -133,7 +133,7 @@ namespace Frigo
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            timer1.Interval = 3000;
+            //timer1.Interval = 1000;
             agg.PerformClick(); 
                    
         }

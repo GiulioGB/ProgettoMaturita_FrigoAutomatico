@@ -89,9 +89,14 @@
             // accedi_login
             // 
             this.accedi_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.accedi_login.BackColor = System.Drawing.Color.Lime;
+            this.accedi_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.accedi_login.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.accedi_login.FlatAppearance.BorderSize = 3;
+            this.accedi_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.accedi_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.accedi_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.accedi_login.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold);
-            this.accedi_login.Location = new System.Drawing.Point(199, 557);
+            this.accedi_login.Location = new System.Drawing.Point(199, 406);
             this.accedi_login.Name = "accedi_login";
             this.accedi_login.Size = new System.Drawing.Size(975, 145);
             this.accedi_login.TabIndex = 5;
@@ -102,9 +107,14 @@
             // registrazione_login
             // 
             this.registrazione_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.registrazione_login.BackColor = System.Drawing.Color.Aqua;
+            this.registrazione_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.registrazione_login.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.registrazione_login.FlatAppearance.BorderSize = 3;
+            this.registrazione_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.registrazione_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.registrazione_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registrazione_login.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold);
-            this.registrazione_login.Location = new System.Drawing.Point(199, 406);
+            this.registrazione_login.Location = new System.Drawing.Point(199, 557);
             this.registrazione_login.Name = "registrazione_login";
             this.registrazione_login.Size = new System.Drawing.Size(975, 145);
             this.registrazione_login.TabIndex = 6;
@@ -116,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.registrazione_login);
             this.Controls.Add(this.accedi_login);
             this.Controls.Add(this.Password_TextBox);
