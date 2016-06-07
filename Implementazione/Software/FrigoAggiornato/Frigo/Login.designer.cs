@@ -50,20 +50,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(193, 145);
+            this.label2.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(199, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 32);
+            this.label2.Size = new System.Drawing.Size(219, 47);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nome Frigo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(193, 255);
+            this.label3.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(199, 246);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 32);
+            this.label3.Size = new System.Drawing.Size(185, 47);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password";
             // 
@@ -90,10 +90,10 @@
             // 
             this.accedi_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.accedi_login.BackColor = System.Drawing.Color.Lime;
-            this.accedi_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accedi_login.Location = new System.Drawing.Point(184, 450);
+            this.accedi_login.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold);
+            this.accedi_login.Location = new System.Drawing.Point(199, 557);
             this.accedi_login.Name = "accedi_login";
-            this.accedi_login.Size = new System.Drawing.Size(491, 250);
+            this.accedi_login.Size = new System.Drawing.Size(975, 145);
             this.accedi_login.TabIndex = 5;
             this.accedi_login.Text = "Accedi";
             this.accedi_login.UseVisualStyleBackColor = false;
@@ -102,11 +102,11 @@
             // registrazione_login
             // 
             this.registrazione_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.registrazione_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.registrazione_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrazione_login.Location = new System.Drawing.Point(681, 450);
+            this.registrazione_login.BackColor = System.Drawing.Color.Aqua;
+            this.registrazione_login.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold);
+            this.registrazione_login.Location = new System.Drawing.Point(199, 406);
             this.registrazione_login.Name = "registrazione_login";
-            this.registrazione_login.Size = new System.Drawing.Size(491, 250);
+            this.registrazione_login.Size = new System.Drawing.Size(975, 145);
             this.registrazione_login.TabIndex = 6;
             this.registrazione_login.Text = "Registrati";
             this.registrazione_login.UseVisualStyleBackColor = false;
