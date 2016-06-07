@@ -43,7 +43,7 @@
 							
 							//data di oggi
 							$oggi = strtotime(date('Y-m-d'));
-							echo $oggi;
+							
 							//imposto la query
 							$result = mysqli_query($link, "SELECT NomeAlimento, dataScadenza , EAN , luogoProduzione , Quantita FROM prodotto WHERE IDFrigo = ( SELECT ID 
 																													 FROM frigo
