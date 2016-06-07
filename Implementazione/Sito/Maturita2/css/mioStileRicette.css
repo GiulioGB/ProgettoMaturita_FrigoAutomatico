@@ -1,8 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
 
-
-#MIOdivInfo{
+#MIOdivRisultati{
 	width: auto;
 	height: auto;
 	background-color: rgba(255, 255, 255, 0.85);
@@ -11,42 +10,118 @@
 	left: 5%;
 	right: 5%;
 	top: 15%;
-    margin-bottom: 4.7%;
-    border-color: #266f8e;
+	margin-bottom: 4.7%;
+    border-color: #CE3018;
     border-style:double;
     border-width:thick;
-    
 	border-radius: 30px;
+	
 }
 
-body {
-    background-color: #28abe3;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-    font-family: 'Open Sans', sans-serif;
+#gialloZafferano{
+	
+	background-color: #fbceb1;
+    width: 607px;
+    height: 150px;
+    border: 2px solid #CE3018;
+	border-radius: 20px;
+}
+
+#cucinaItaliana{
+	
+	background-color: #fbceb1;
+    width: 607px;
+    height: 150px;
+    border: 2px solid #CE3018;
+	border-radius: 20px;
+   
+}
+
+#salePepe{
+	
+	background-color: #fbceb1;
+    width: 607px;
+    height: 150px;
+    border: 2px solid #CE3018;
+	border-radius: 20px;
+    
+}
+
+#cockAround{
+
+	background-color: #fbceb1;
+    width: 607px;
+    height: 150px;
+    border: 2px solid #CE3018;
+    border-radius: 20px;
 }
 
 #torna{
 
-    background-color: #28abe3;
-    width: auto;
+    background-color: #FB6648;
+    width: 150px;
     height: 50px;
-    border: 2px solid #266f8e;
+    border: 2px solid #CE3018;
     font-family: Cambria;
     font-size:16px;
     font-weight:bold;
 }
+
 
 #torna:hover{
      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	 cursor:pointer;
 }
 
+#gialloZafferano:hover{
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	 cursor:pointer;
+}
+
+#cucinaItaliana:hover{
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	 cursor:pointer;
+}
+
+#salePepe:hover{
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	 cursor:pointer;
+}
+
+#cockAround:hover{
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	 cursor:pointer;
+}
+
+body {
+    background-color: #FB6648;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+table {
+    border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td{
+   border-bottom: 1px solid #ddd;
+   border: 1px solid black;
+}
+
+th{
+    background-color: #FB6648;
+    color: white;
+	border: 1px solid black;
+}
+
+
 /**** Start Section Title Section ****/
 
 .section-title h3{
-    color: #266f8e !important;
+    color: #FB6648 !important;
     //font-style: italic;
     font-size: 28px;
     font-family: 'Oswald', sans-serif;
