@@ -218,10 +218,10 @@
 						<?php 
 							if(isset($_SESSION["CodiceFrigo"]))
 							{
-								echo "<a href='#InventarioD' data-toggle='modal'>";
+								echo "<a href='Ricette.php' >";
 								echo "<i class='fa fa-th-list'></i>";
 								echo "<p>";
-								echo "Inventario Frigo";
+								echo "Ricette";
 								echo "</p>";
 								echo "</a>";
 								
