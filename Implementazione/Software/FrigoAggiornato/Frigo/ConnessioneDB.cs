@@ -18,6 +18,8 @@ namespace Frigo
         //--- 
         
         MySqlConnection mcon = new MySqlConnection("server = localhost; user id = root; database = data_frigo; password= '';");
+       // MySqlConnection mcon = new MySqlConnection("server = 172.22.109.46; user id = pippo; port=3306; database = data_frigo; password= 'ciao';");
+
         MySqlCommand mcd;
         MySqlDataReader mdr;
 
@@ -614,7 +616,7 @@ namespace Frigo
             {
                 string date = mdr["dataScadenza"].ToString();
                 DateTime pdate = Convert.ToDateTime(date); //data del prodotto
-                if (pdate < today)
+                if (pdate > today)
                 {
                     x.DefaultCellStyle.Font = new Font("Arial", 16F, GraphicsUnit.Pixel);
                     x.Rows.Add(mdr["NomeAlimento"].ToString(), mdr["luogoProduzione"].ToString(), mdr["dataScadenza"].ToString(), mdr["Quantita"].ToString());
