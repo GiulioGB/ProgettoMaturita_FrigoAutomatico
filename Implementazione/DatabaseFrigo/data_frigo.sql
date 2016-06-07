@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Giu 03, 2016 alle 08:16
+-- Generation Time: Giu 07, 2016 alle 10:49
 -- Versione del server: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `frigo` (
   `Username` varchar(20) NOT NULL,
   `Password` varchar(40) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dump dei dati per la tabella `frigo`
@@ -136,8 +136,18 @@ CREATE TABLE IF NOT EXISTS `listaspesa` (
   `ID` int(5) NOT NULL AUTO_INCREMENT,
   `nomeAlimento` varchar(30) NOT NULL,
   `quantita` int(5) NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `IDFrigo` int(5) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `IDFrigo` (`IDFrigo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dump dei dati per la tabella `listaspesa`
+--
+
+INSERT INTO `listaspesa` (`ID`, `nomeAlimento`, `quantita`, `IDFrigo`) VALUES
+(3, 'BananaGiulio', 2, 1),
+(4, 'Mela', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -182,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `prodotto` (
   PRIMARY KEY (`ID`),
   KEY `IDFrigo` (`IDFrigo`),
   KEY `NomeAlimento` (`NomeAlimento`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Limiti per le tabelle scaricate
@@ -193,6 +203,12 @@ CREATE TABLE IF NOT EXISTS `prodotto` (
 --
 ALTER TABLE `familiare`
   ADD CONSTRAINT `familiare_ibfk_1` FOREIGN KEY (`IDFrigo`) REFERENCES `frigo` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Limiti per la tabella `listaspesa`
+--
+ALTER TABLE `listaspesa`
+  ADD CONSTRAINT `listaspesa_ibfk_1` FOREIGN KEY (`IDFrigo`) REFERENCES `frigo` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limiti per la tabella `preferito`
