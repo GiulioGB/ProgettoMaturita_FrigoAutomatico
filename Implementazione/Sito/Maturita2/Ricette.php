@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Inventario Frigo</title>
+		<title>Ricette</title>
 		
 		<!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -17,43 +17,36 @@
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		
 		<?php session_start(); ?>
-		<META HTTP-EQUIV="Refresh" CONTENT="5">
+		
+		<?php 
+		//SE NON SONO PIU' CONNESSO NON POSSO VEDERE QUESTA PAGINA!!
+		if(!isset($_SESSION["CodiceFrigo"]))
+		{
+			header("location: index.php");
+		}
+		?>
     </head>
 	<body>
 <!-- Inizio pagina di Inventario -->
-		<div id="MIOdivInfo">	
+		<div id="MIOdivRisultati">	
 			<div class="container">
 				<div class="row">
 					<div class="section-title text-center">
-						<h3>Inventario Frigo</h3>
-						<?php
-	
-							@include("connessione.php");
-
-
-							//seleziono il database da usare
-							mysqli_select_db($link, "prova2");
-
-							//imposto la query
-							$result = mysqli_query($link, "SELECT Nome, dataScadenza FROM prodotti");
-
-							echo "</br>";
-							echo "<table border='3' align='center' >";
-							echo "<tr><td>Nome Prodotto</td><td>Data di Scadenza</td></tr>";
-							while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
-
-								echo "<tr>";
-								echo "<td align='center'>$row[0]</td>";
-								echo "<td align='center'>$row[1]</td>";
-								echo "</tr>";
-								
-								
-							}
-							echo "</table>";
-							
-							?>
-							</br>
+						<h3>Ricette</h3>
+						
 						</br>
+						
+						&nbsp;&nbsp; <input type="image" id="gialloZafferano" name="gialloZafferano" src="images/LogoGialloZafferano.png" onClick="window.location.href ='http://www.giallozafferano.it/'"> &nbsp;&nbsp;
+						&nbsp;&nbsp;<input type="image" id="salePepe" name="salePepe"  src="images/LogoCucinaItaliana.png" onClick="window.location.href ='http://www.lacucinaitaliana.it/'"> &nbsp;&nbsp;
+						
+						</br></br>
+						
+						&nbsp;&nbsp; <input type="image" id="cucinaItaliana" name="cucinaItaliana"  src="images/LogoSalePepe.png" onClick="window.location.href ='http://www.salepepe.it/'"> &nbsp;&nbsp;
+						&nbsp;&nbsp;<input type="image" id="cockAround" name="cockAround" src="images/LogoCook.png" onClick="window.location.href ='http://www.cookaround.com/'"> &nbsp;&nbsp;
+						
+						</br></br></br></br>
+						
+						
 						<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'">
 						</br>
 						</br>
