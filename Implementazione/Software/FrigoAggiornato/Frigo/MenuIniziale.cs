@@ -83,7 +83,7 @@ namespace Frigo
 
         private void Preferiti_Click(object sender, EventArgs e)
         {
-            Preferiti pref = new Preferiti();
+            Preferiti pref = new Preferiti(nomeFrigo);
             Controls.Add(pref);
             pref.BringToFront();
             this.Refresh();

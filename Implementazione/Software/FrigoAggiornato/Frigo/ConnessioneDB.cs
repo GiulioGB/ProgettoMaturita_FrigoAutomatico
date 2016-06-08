@@ -646,10 +646,10 @@ namespace Frigo
         }
 
         //inserimento utenti nella comboBox
-        public void ComboBoxUtenti(ComboBox cb)//inserisce utenti nella ComboBox
+        public void ComboBoxUtenti(ComboBox cb, int id)//inserisce utenti nella ComboBox
         {
             ApriConnessione();
-            string q = "SELECT * FROM familiare";//tutti i nomi degli utenti
+            string q = "SELECT Nome FROM familiare WHERE IDFrigo = "+id+"";//tutti i nomi degli utenti contenuti nel frigo con cui sono loggato
             mcd = new MySqlCommand(q, mcon);
             mdr = mcd.ExecuteReader();
 
@@ -657,24 +657,28 @@ namespace Frigo
             {
                 cb.Items.Add(mdr["Nome"]);
             }
-            cb.SelectedIndex = 0;
+            //cb.SelectedIndex = 0;
             ChiudiConnessione();
         }
 
         //aggiungi preferito
-        public void AggiungiPreferito(string preferito, string utente)//inserisce prodotto tra i preferiti
+        public void AggiungiPreferito(string preferito, string utente, int id)//inserisce prodotto tra i preferiti
         {
-            string IDFamiliare = " ";
-            string IDAlimento = " ";
-            ApriConnessione();
 
-            string q1 = "SELECT ID FROM familiare WHERE Nome ='" + utente + "'";
+            inizio:
+
+            int IDFamiliare = 0 ;
+            int IDAlimento = 0;
+            ApriConnessione();
+            bool sentinella=true;
+
+            string q1 = "SELECT ID FROM familiare WHERE Nome ='" + utente + "' AND IDFrigo = "+id+"";
 
             mcd = new MySqlCommand(q1, mcon);
             mdr = mcd.ExecuteReader();
-            while (mdr.Read())//inserimento utenti nella ComboBox
+            while (mdr.Read())
             {
-                IDFamiliare = mdr["ID"].ToString();
+                IDFamiliare = Int32.Parse(mdr["ID"].ToString());
             }
             ChiudiConnessione();
 
@@ -682,30 +686,49 @@ namespace Frigo
             string q2 = "SELECT ID FROM alimento WHERE Nome ='" + preferito + "'";
             mcd = new MySqlCommand(q2, mcon);
             mdr = mcd.ExecuteReader();
-            while (mdr.Read())//inserimento utenti nella ComboBox
+            if(mdr.Read())
             {
-                IDAlimento = mdr["ID"].ToString();
+                IDAlimento = Int32.Parse(mdr["ID"].ToString());
             }
-            ChiudiConnessione();
+            else
+            {
+                //inserisco negli alimenti e poi aggiungo ai preferiti
+                ChiudiConnessione();
+                string query2 = "INSERT INTO alimento(Nome) values('"+preferito+"')";
+                ExecuteQuery(query2);
+                sentinella=false;
 
-            string q = "INSERT INTO preferito (IDAlimento, IDFamiliare) values('" + IDAlimento + "','" + IDFamiliare + "')";
-            ExecuteQuery(q);
+            }
+
+            if(sentinella == false)
+            {
+                goto inizio;
+            }
+            else
+            {
+                ChiudiConnessione();
+                //Aggiungo i preferiti alla tabella
+                string q = "INSERT INTO preferito (IDAlimento, IDFamiliare) values(" + IDAlimento + "," + IDFamiliare + ")";
+                ExecuteQuery(q);
+            }
+
+            
         }
 
         //elimna preferito
-        public void EliminaPreferito(string preferito, string utente)//elimina prodotto dai preferiti
+        public void EliminaPreferito(string preferito, string utente,int id)//elimina prodotto dai preferiti
         {
-            string IDFamiliare = " ";
-            string IDAlimento = " ";
+            int IDFamiliare = 0 ;
+            int IDAlimento = 0;
             ApriConnessione();
 
-            string q1 = "SELECT ID FROM familiare WHERE Nome ='" + utente + "'";
+            string q1 = "SELECT ID FROM familiare WHERE Nome ='" + utente + "' AND IDFrigo = "+id+"";
 
             mcd = new MySqlCommand(q1, mcon);
             mdr = mcd.ExecuteReader();
             while (mdr.Read())//inserimento utenti nella ComboBox
             {
-                IDFamiliare = mdr["ID"].ToString();
+                IDFamiliare = Int32.Parse(mdr["ID"].ToString());
             }
             ChiudiConnessione();
 
@@ -715,29 +738,56 @@ namespace Frigo
             mdr = mcd.ExecuteReader();
             while (mdr.Read())//inserimento utenti nella ComboBox
             {
-                IDAlimento = mdr["ID"].ToString();
+                IDAlimento = Int32.Parse(mdr["ID"].ToString());
             }
             ChiudiConnessione();
 
-            string q = "DELETE FROM preferito WHERE IDFamiliare = '" + IDFamiliare + "' AND IDAlimento = '" + IDAlimento + "'";
+            string q = "DELETE FROM preferito WHERE IDFamiliare = " + IDFamiliare + " AND IDAlimento = " + IDAlimento + "";
             ExecuteQuery(q);
 
         }
 
         //visualizza preferiti
-        public void VisualizzaPreferiti(TextBox txB, string utente)//visuali tutti i preferiti di un determinato utente
+        public void VisualizzaPreferiti(int id,DataGridView x)//visuali tutti i preferiti di un determinato utente
         {
+            
+            //vettore che conterrà tutti i miei familiari
+            string[] vett = new string[7];
+            //leggo tutti i familiari del frigo
             ApriConnessione();
-            string q = "SELECT * FROM (preferito JOIN familiare ON IDFamiliare = ID) JOIN alimento ON IDAlimento=ID WHERE familiare.Nome='" + utente + "'";
-
-            mcd = new MySqlCommand(q, mcon);
+            string query = "SELECT Nome FROM familiare WHERE IDFrigo = " + id + "";
+            mcd = new MySqlCommand(query, mcon);
             mdr = mcd.ExecuteReader();
-
-            while (mdr.Read())//inserimento utenti nella ComboBox
+            int i = 0;
+            while(mdr.Read())
             {
-                txB.Text = mdr["Nome"].ToString();
+                vett[i] = mdr["Nome"].ToString();
+                i++;
             }
             ChiudiConnessione();
+
+            x.Rows.Clear();
+
+            for (int j = 0; j < i;j++ )
+            {
+                ApriConnessione();
+                string q = "SELECT alimento.Nome as a, familiare.Nome as b FROM (((preferito JOIN alimento ON IDAlimento = alimento.ID) JOIN familiare ON IDFamiliare = familiare.ID) JOIN frigo ON IDFrigo = frigo.ID) WHERE IDFrigo = " + id + " AND familiare.Nome = '" + vett[j] + "' ";
+
+                mcd = new MySqlCommand(q, mcon);
+                mdr = mcd.ExecuteReader();
+
+                
+
+                while (mdr.Read())
+                {
+                    x.DefaultCellStyle.Font = new Font("Elephant", 16F, GraphicsUnit.Pixel);
+                    x.Rows.Add(mdr["a"].ToString(),mdr["b"]);
+                }
+
+                ChiudiConnessione();
+            }
+               
+           
         }
     }
 
