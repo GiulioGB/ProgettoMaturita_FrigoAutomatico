@@ -7,6 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Net;
 using System.Security.Cryptography;
 //using System.Data.SqlServerCe;
 namespace Frigo
@@ -16,12 +17,42 @@ namespace Frigo
         //---
         //-INIZIO GESTIONE CONNESSIONE
         //--- 
-        
-        MySqlConnection mcon = new MySqlConnection("server = localhost; user id = root; database = data_frigo; password= '';");
-       // MySqlConnection mcon = new MySqlConnection("server = 172.22.109.46; user id = pippo; port=3306; database = data_frigo; password= 'ciao';");
+        String HostName;
+
 
         MySqlCommand mcd;
         MySqlDataReader mdr;
+        MySqlConnection mcon;
+
+        public string HostIP()
+        {
+            //ottengo il nome dell'host
+            HostName = Dns.GetHostName();
+
+            IPHostEntry ipEntry = Dns.GetHostByName(HostName);
+
+            IPAddress[] addresses = ipEntry.AddressList;
+
+            return addresses[2].ToString();
+        }
+        
+        
+        public ConnessioneDB()
+        {
+            String IP = HostIP();
+            if(IP == "172.22.109.46")
+            {
+                MessageBox.Show(IP);
+                mcon = new MySqlConnection("server = 172.22.109.46; user id = pippo; port=3306; database = data_frigo; password= 'ciao';");
+            }
+            else
+            {
+                mcon = new MySqlConnection("server = localhost; user id = root; database = data_frigo; password= '';");
+       
+            }
+        }
+        
+        
 
         //apro la connessione
         public void ApriConnessione()
