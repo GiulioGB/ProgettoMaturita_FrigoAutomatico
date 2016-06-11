@@ -31,11 +31,27 @@
 							{
 								
 								//imposto la query
-								$result = mysqli_query($link, "SELECT Nome FROM alimento JOIN preferito ON IDAlimento = alimento.ID WHERE  alimento.Nome NOT IN ( SELECT prodotto.NomeAlimento FROM prodotto WHERE 1) ");
-								$result2 = mysqli_query($link, "SELECT * FROM listaspesa WHERE 1");
+								$result = mysqli_query($link, "SELECT alimento.Nome FROM (alimento JOIN preferito ON IDAlimento = alimento.ID) JOIN familiare ON preferito.IDFamiliare = familiare.ID 
+																WHERE  alimento.Nome NOT IN ( SELECT prodotto.NomeAlimento FROM prodotto WHERE 1) AND familiare.IDFrigo = ( SELECT ID FROM frigo WHERE Username ='".$_SESSION["CodiceFrigo"]."') ");
 								
 								
+								
+								
+								$result2 = mysqli_query($link, "SELECT * FROM listaspesa WHERE IDFrigo = ( SELECT ID FROM frigo WHERE Username ='".$_SESSION["CodiceFrigo"]."')");
+								
+								
+									
 								if( mysqli_num_rows ( $result) > 0)
+									$s = 0;
+								else $s = 1;
+								
+								if( mysqli_num_rows ( $result2) > 0)
+									$s = 0;
+								
+								
+								if($s == 1)
+									echo "</br></br>Tutti gli alimenti preferiti sono presenti nel frigo";
+								else
 								{
 									echo "</br></br>";
 									echo "<table align='center' >";
@@ -44,27 +60,23 @@
 									while($row = mysqli_fetch_array( $result, MYSQL_BOTH)){
 										echo "<tr><td align='center'>".$i."</td><td align='center'>".$row[0]."</td><td align='center'>"."-"."</td></tr>";
 										$i++;
-									}	
+									}
 								
-								}else echo "</br></br>Tutti gli alimenti preferiti sono presenti nel frigo";
-								
-								
-								if( mysqli_num_rows ( $result2) > 0)
-								{
 									while($row = mysqli_fetch_array( $result2, MYSQL_BOTH)){
 										echo "<tr><td align='center'>".$i."</td><td align='center'>".$row['nomeAlimento']."</td><td align='center'>".$row['quantita']."</td></tr>";
 										$i++;
 									}
-								}	
 								
-								echo "</table>";
-								echo "</br></br>";
+							
+									echo "</table>";
+									
+								}
 								
 							}else echo "</br></br>Nessun familiare registrato";
 							
 							?>
 							
-					<input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'"> </br></br>
+					</br></br> <input type="button" id="torna" name="torna" value="HOME PAGE" onClick="window.location.href ='index.php'"> </br></br>
 				</div>
 			</div>
 		</div>
